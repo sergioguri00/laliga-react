@@ -11,6 +11,7 @@ const Footer = () => {
           <a
             href={`/teams/${teambadge.id}`}
             className="inline-block hover:scale-105 transition"
+            key={teambadge.id}
           >
             <img
               src={`/src/images/teams/${teambadge.id}.webp`}
