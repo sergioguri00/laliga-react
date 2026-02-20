@@ -1,0 +1,184 @@
+{
+  "stadiums": [
+    {
+      "id": 1,
+      "name": "Estadio San Mamés",
+      "year": 2013,
+      "latitude": 43.264205,
+      "longitude": -2.949369,
+      "capacity": 53289,
+      "team_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Riyadh Air Metropolitano",
+      "year": 2017,
+      "latitude": 40.436380,
+      "longitude": -3.599350,
+      "capacity": 70460,
+      "team_id": 2
+    },
+    {
+      "id": 3,
+      "name": "Estadio El Sadar",
+      "year": 1967,
+      "latitude": 42.796910,
+      "longitude": -1.637210,
+      "capacity": 23576,
+      "team_id": 3
+    },
+    {
+      "id": 4,
+      "name": "Estadio ABANCA Balaídos",
+      "year": 1928,
+      "latitude": 42.211920,
+      "longitude": -8.739740,
+      "capacity": 24870,
+      "team_id": 4
+    },
+    {
+      "id": 5,
+      "name": "Mendizorroza",
+      "year": 1924,
+      "latitude": 42.837090,
+      "longitude": -2.688250,
+      "capacity": 19840,
+      "team_id": 5
+    },
+    {
+      "id": 6,
+      "name": "Estadio Martínez Valero",
+      "year": 1976,
+      "latitude": 38.26718,
+      "longitude": -0.66279,
+      "capacity": 31388,
+      "team_id": 6
+    },
+    {
+      "id": 7,
+      "name": "Spotify Camp Nou",
+      "year": 1957,
+      "latitude": 41.38089,
+      "longitude": 2.12288,
+      "capacity": 45401,
+      "team_id": 7
+    },
+    {
+      "id": 8,
+      "name": "Coliseum",
+      "year": 1998,
+      "latitude": 40.325560,
+      "longitude": -3.714730,
+      "capacity": 16500,
+      "team_id": 8
+    },
+    {
+      "id": 9,
+      "name": "Estadi Municipal de Montilivi",
+      "year": 1970,
+      "latitude": 41.961060,
+      "longitude": 2.827750,
+      "capacity": 14624,
+      "team_id": 9
+    },
+    {
+      "id": 10,
+      "name": "Estadi Ciutat de València",
+      "year": 1969,
+      "latitude": 39.49476,
+      "longitude": -0.36395,
+      "capacity": 26354,
+      "team_id": 10
+    },
+    {
+      "id": 11,
+      "name": "Estadio de Vallecas",
+      "year": 1976,
+      "latitude": 40.392060,
+      "longitude": -3.658710,
+      "capacity": 14708,
+      "team_id": 11
+    },
+    {
+      "id": 12,
+      "name": "RCDE Stadium",
+      "year": 2009,
+      "latitude": 41.347920,
+      "longitude": 2.075680,
+      "capacity": 42260,
+      "team_id": 12
+    },
+    {
+      "id": 13,
+      "name": "Estadi Mallorca Son Moix",
+      "year": 1999,
+      "latitude": 39.589960,
+      "longitude": 2.630040,
+      "capacity": 26020,
+      "team_id": 13
+    },
+    {
+      "id": 14,
+      "name": "Estadio Olímpico de La Cartuja",
+      "year": 1999,
+      "latitude": 37.41715,
+      "longitude": -6.00451,
+      "capacity": 70000,
+      "team_id": 14
+    },
+    {
+      "id": 15,
+      "name": "Estadio Santiago Bernabéu",
+      "year": 1947,
+      "latitude": 40.453030,
+      "longitude": -3.688330,
+      "capacity": 78297,
+      "team_id": 15
+    },
+    {
+      "id": 16,
+      "name": "Estadio Carlos Tartiere",
+      "year": 2000,
+      "latitude": 43.36079,
+      "longitude": -5.87036,
+      "capacity": 30500,
+      "team_id": 16
+    },
+    {
+      "id": 17,
+      "name": "Reale Arena",
+      "year": 1993,
+      "latitude": 43.301370,
+      "longitude": -1.973610,
+      "capacity": 40000,
+      "team_id": 17
+    },
+    {
+      "id": 18,
+      "name": "Ramón Sánchez-Pizjuán",
+      "year": 1958,
+      "latitude": 37.384050,
+      "longitude": -5.970580,
+      "capacity": 43864,
+      "team_id": 18
+    },
+    {
+      "id": 19,
+      "name": "Camp de Mestalla",
+      "year": 1923,
+      "latitude": 39.474630,
+      "longitude": -0.358210,
+      "capacity": 49430,
+      "team_id": 19
+    },
+    {
+      "id": 20,
+      "name": "Estadi de la Ceràmica",
+      "year": 1923,
+      "latitude": 39.944130,
+      "longitude": -0.103430,
+      "capacity": 23500,
+      "team_id": 20
+    }
+  ]
+}

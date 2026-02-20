@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --font-laliga: "laligafont", sans-serif;
+  --color-laligared: #ff4b44;
+  --color-mainblack: #00001b;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #00001b;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-logo {
+  svg {
+    display: inline-block;
+    fill: #00001b;
+    transition-property:
+      color, background-color, border-color, text-decoration-color, fill,
+      stroke, opacity, box-shadow, transform, filter, backdrop-filter, scale;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+}
+.navbar-logo:hover {
+  svg {
+    fill: #ff4b44;
+  }
+}
+
+#rrss {
+  a {
+    svg {
+      display: inline-block;
+      fill: #00001b;
+      transition-property:
+        color, background-color, border-color, text-decoration-color, fill,
+        stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+  }
+  a:hover {
+    #facebook {
+      fill: #337fff;
+    }
+    #instagram {
+      fill: #c13584;
+    }
+    #x {
+      opacity: 0.7;
+    }
+    #linkedin {
+      fill: #006699;
+    }
+    #tiktok {
+      fill: #ff0855;
+    }
+    #vk {
+      fill: #2787f5;
+    }
+    #youtube {
+      fill: #ff3000;
+    }
+  }
+}
+
+.match-button {
+  background-color: #00001b;
+  color: white;
+}
+
+.match-button:hover {
+  background-color: #ff4b44;
+}
+
+.flag-button:hover {
+  background-color: #00001b;
+  color: white;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.leagueTable {
+  color: #00001b;
+
+  tr:first-child {
+    border-bottom: 1px solid #00001b;
+  }
+
+  th {
+    padding: 0px 10px;
+  }
+
+  td {
+    text-align: center;
+    margin: 0 10;
+  }
+}
+
+.results-grid {
+  grid-template-columns: 5.5rem 1fr 40px 1fr 60px;
+}
+
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: 8rem 1fr 40px 1fr 85px;
+  }
+}
+
+.about-button {
+  border-radius: 9999px;
+  padding: 10px;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.about-button:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.index-grid {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  justify-content: center;
+  gap: 2.5rem;
+  padding-top: 7rem;
+}
+
+@media (min-width: 1280px) {
+  .index-grid {
+    grid-template-columns: auto 1fr 1fr;
+    justify-content: space-between;
+  }
+}
