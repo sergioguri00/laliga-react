@@ -11,7 +11,7 @@ import { useParams } from "react-router-dom";
 import playersData from "@/data/players.json";
 import teamsData from "@/data/teams.json";
 import type { Player, Team } from "@/interfaces/interfaces";
-import useDocumentTitle from "@/utils/useDocumentTitle";
+import useDocumentTitle from "@/hooks/useDocumentTitle";
 
 const currentLang = "es";
 

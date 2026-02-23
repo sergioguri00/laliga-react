@@ -2,7 +2,7 @@ import teamsData from "@/data/teams.json";
 import stadiumsData from "@/data/stadiums.json";
 import type { Team } from "../interfaces/interfaces.ts";
 import TeamSquare from "@/components/TeamSquare.tsx";
-import useDocumentTitle from "@/utils/useDocumentTitle";
+import useDocumentTitle from "@/hooks/useDocumentTitle.ts";
 
 const Teams = () => {
   useDocumentTitle("Equipos");

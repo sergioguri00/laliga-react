@@ -7,7 +7,7 @@ import Squad from "@/components/Squad.jsx";
 import { translator } from "@/utils/dictionary.js";
 import type { Team } from "@/interfaces/interfaces.ts";
 import { useState } from "react";
-import useDocumentTitle from "@/utils/useDocumentTitle";
+import useDocumentTitle from "@/hooks/useDocumentTitle";
 
 const TeamDetail = () => {
   const { id } = useParams() as { id: string };
