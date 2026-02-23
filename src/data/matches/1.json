@@ -1,0 +1,567 @@
+{
+    "matches": [
+        {
+            "id": 1,
+            "matchday": 1,
+            "date": "2024-08-15",
+            "time": "19:00",
+            "homeTeam": 9,
+            "awayTeam": 11,
+            "homeGoals": [
+                {
+                    "minute": "57",
+                    "scorer": "301",
+                    "assist": "305"
+                }
+            ],
+            "awayGoals": [
+                {
+                    "minute": "18",
+                    "scorer": "363",
+                    "assist": null
+                },
+                {
+                    "minute": "20",
+                    "scorer": "362",
+                    "assist": "363"
+                },
+                {
+                    "minute": "90",
+                    "scorer": "357",
+                    "assist": null
+                }
+            ],
+            "homePossession": 44,
+            "awayPossession": 56,
+            "homeShots": 7,
+            "awayShots": 16,
+            "homeShotsOnTarget": 2,
+            "awayShotsOnTarget": 5,
+            "homeCorners": 2,
+            "awayCorners": 4,
+            "homeFouls": 8,
+            "awayFouls": 17,
+            "homeCards": [
+                {
+                    "minute": "43",
+                    "type": "red",
+                    "player": "278"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "15",
+                    "type": "yellow",
+                    "player": "347"
+                }
+            ],
+            "homeOffsides": 1,
+            "awayOffsides": 1
+        },
+        {
+            "id": 2,
+            "matchday": 1,
+            "date": "2025-08-15",
+            "time": "21:30",
+            "homeTeam": 20,
+            "awayTeam": 16,
+            "homeGoals": [
+                {
+                    "minute": "29",
+                    "scorer": "Etta Eyong",
+                    "assist": null
+                },
+                {
+                    "minute": "36",
+                    "scorer": "661",
+                    "assist": "662"
+                }
+            ],
+            "awayGoals": [],
+            "homePossession": 68,
+            "awayPossession": 32,
+            "homeShots": 25,
+            "awayShots": 5,
+            "homeShotsOnTarget": 10,
+            "awayShotsOnTarget": 4,
+            "homeCorners": 10,
+            "awayCorners": 1,
+            "homeFouls": 10,
+            "awayFouls": 8,
+            "homeCards": [
+                {
+                    "minute": "13",
+                    "type": "yellow",
+                    "player": "640"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "18",
+                    "type": "yellow",
+                    "player": "515"
+                },
+                {
+                    "minute": "27",
+                    "type": "red",
+                    "player": "515"
+                }
+            ],
+            "homeOffsides": 0,
+            "awayOffsides": 1
+        },
+        {
+            "id": 3,
+            "matchday": 1,
+            "date": "2025-08-16",
+            "time": "19:30",
+            "homeTeam": 13,
+            "awayTeam": 7,
+            "homeGoals": [],
+            "awayGoals": [
+                {
+                    "minute": "7",
+                    "scorer": "237",
+                    "assist": "236"
+                },
+                {
+                    "minute": "23",
+                    "scorer": "234",
+                    "assist": null
+                },
+                {
+                    "minute": "90+4",
+                    "scorer": "236",
+                    "assist": "223"
+                }
+            ],
+            "homePossession": 29,
+            "awayPossession": 71,
+            "homeShots": 4,
+            "awayShots": 24,
+            "homeShotsOnTarget": 1,
+            "awayShotsOnTarget": 8,
+            "homeCorners": 3,
+            "awayCorners": 6,
+            "homeFouls": 8,
+            "awayFouls": 17,
+            "homeCards": [
+                {
+                    "minute": "9",
+                    "type": "yellow",
+                    "player": "Morey"
+                },
+                {
+                    "minute": "24",
+                    "type": "yellow",
+                    "player": "414"
+                },
+                {
+                    "minute": "33",
+                    "type": "red",
+                    "player": "414"
+                },
+                {
+                    "minute": "39",
+                    "type": "red",
+                    "player": "420"
+                },
+                {
+                    "minute": "42",
+                    "type": "yellow",
+                    "player": "417"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "45+7",
+                    "type": "yellow",
+                    "player": "237"
+                }
+            ],
+            "homeOffsides": 2,
+            "awayOffsides": 3
+        },
+        {
+            "id": 4,
+            "matchday": 1,
+            "date": "2025-08-16",
+            "time": "21:30",
+            "homeTeam": 19,
+            "awayTeam": 17,
+            "homeGoals": [
+                {
+                    "minute": "57",
+                    "scorer": "635",
+                    "assist": "637"
+                }
+            ],
+            "awayGoals": [
+                {
+                    "minute": "60",
+                    "scorer": "551",
+                    "assist": "556"
+                }
+            ],
+            "homePossession": 54,
+            "awayPossession": 46,
+            "homeShots": 18,
+            "awayShots": 13,
+            "homeShotsOnTarget": 2,
+            "awayShotsOnTarget": 3,
+            "homeCorners": 8,
+            "awayCorners": 7,
+            "homeFouls": 5,
+            "awayFouls": 11,
+            "homeCards": [
+                {
+                    "minute": "27",
+                    "type": "yellow",
+                    "player": "613"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "45+3",
+                    "type": "yellow",
+                    "player": "548"
+                },
+                {
+                    "minute": "67",
+                    "type": "yellow",
+                    "player": "537"
+                }
+            ],
+            "homeOffsides": 1,
+            "awayOffsides": 2
+        },
+        {
+            "id": 5,
+            "matchday": 1,
+            "date": "2025-08-16",
+            "time": "21:30",
+            "homeTeam": 5,
+            "awayTeam": 10,
+            "homeGoals": [
+                {
+                    "minute": "36",
+                    "scorer": "170",
+                    "assist": "161"
+                },
+                {
+                    "minute": "90+2",
+                    "scorer": "150",
+                    "assist": null
+                }
+            ],
+            "awayGoals": [
+                {
+                    "minute": "68",
+                    "scorer": "318",
+                    "assist": null
+                }
+            ],
+            "homePossession": 62,
+            "awayPossession": 38,
+            "homeShots": 15,
+            "awayShots": 7,
+            "homeShotsOnTarget": 4,
+            "awayShotsOnTarget": 3,
+            "homeCorners": 10,
+            "awayCorners": 1,
+            "homeFouls": 15,
+            "awayFouls": 13,
+            "homeCards": [],
+            "awayCards": [
+                {
+                    "minute": "9",
+                    "type": "yellow",
+                    "player": "319"
+                }
+            ],
+            "homeOffsides": 1,
+            "awayOffsides": 3
+        },
+        {
+            "id": 6,
+            "matchday": 1,
+            "date": "2025-08-17",
+            "time": "17:00",
+            "homeTeam": 4,
+            "awayTeam": 8,
+            "homeGoals": [],
+            "awayGoals": [
+                {
+                    "minute": "47",
+                    "scorer": "263",
+                    "assist": "Uche"
+                },
+                {
+                    "minute": "72",
+                    "scorer": "Uche",
+                    "assist": "275"
+                }
+            ],
+            "homePossession": 69,
+            "awayPossession": 31,
+            "homeShots": 11,
+            "awayShots": 10,
+            "homeShotsOnTarget": 3,
+            "awayShotsOnTarget": 3,
+            "homeCorners": 9,
+            "awayCorners": 3,
+            "homeFouls": 15,
+            "awayFouls": 17,
+            "homeCards": [
+                {
+                    "minute": "56",
+                    "type": "yellow",
+                    "player": "127"
+                },
+                {
+                    "minute": "87",
+                    "type": "yellow",
+                    "player": "123"
+                },
+                {
+                    "minute": "90+1",
+                    "type": "yellow",
+                    "player": "118"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "45",
+                    "type": "yellow",
+                    "player": "Uche"
+                },
+                {
+                    "minute": "81",
+                    "type": "yellow",
+                    "player": "241"
+                }
+            ],
+            "homeOffsides": 2,
+            "awayOffsides": 0
+        },
+        {
+            "id": 7,
+            "matchday": 1,
+            "date": "2025-08-17",
+            "time": "19:30",
+            "homeTeam": 1,
+            "awayTeam": 18,
+            "homeGoals": [
+                {
+                    "minute": "36",
+                    "scorer": "30",
+                    "assist": null
+                },
+                {
+                    "minute": "43",
+                    "scorer": "32",
+                    "assist": null
+                },
+                {
+                    "minute": "81",
+                    "scorer": "23",
+                    "assist": "30"
+                }
+            ],
+            "awayGoals": [
+                {
+                    "minute": "60",
+                    "scorer": "Lukebakio",
+                    "assist": "588"
+                },
+                {
+                    "minute": "72",
+                    "scorer": "589",
+                    "assist": "596"
+                }
+            ],
+            "homePossession": 46,
+            "awayPossession": 54,
+            "homeShots": 14,
+            "awayShots": 12,
+            "homeShotsOnTarget": 3,
+            "awayShotsOnTarget": 6,
+            "homeCorners": 10,
+            "awayCorners": 1,
+            "homeFouls": 8,
+            "awayFouls": 12,
+            "homeCards": [],
+            "awayCards": [
+                {
+                    "minute": "6",
+                    "type": "yellow",
+                    "player": "583"
+                },
+                {
+                    "minute": "37",
+                    "type": "yellow",
+                    "player": "589"
+                }
+            ],
+            "homeOffsides": 0,
+            "awayOffsides": 8
+        },
+        {
+            "id": 8,
+            "matchday": 1,
+            "date": "2025-08-17",
+            "time": "21:30",
+            "homeTeam": 12,
+            "awayTeam": 2,
+            "homeGoals": [
+                {
+                    "minute": "73",
+                    "scorer": "379",
+                    "assist": "384"
+                },
+                {
+                    "minute": "84",
+                    "scorer": "393",
+                    "assist": "381"
+                }
+            ],
+            "awayGoals": [
+                {
+                    "minute": "37",
+                    "scorer": "69",
+                    "assist": null
+                }
+            ],
+            "homePossession": 40,
+            "awayPossession": 60,
+            "homeShots": 10,
+            "awayShots": 15,
+            "homeShotsOnTarget": 5,
+            "awayShotsOnTarget": 4,
+            "homeCorners": 1,
+            "awayCorners": 3,
+            "homeFouls": 14,
+            "awayFouls": 11,
+            "homeCards": [
+                {
+                    "minute": "54",
+                    "type": "yellow",
+                    "player": "376"
+                },
+                {
+                    "minute": "74",
+                    "type": "yellow",
+                    "player": "381"
+                },
+                {
+                    "minute": "90+3",
+                    "type": "yellow",
+                    "player": "378"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "42",
+                    "type": "yellow",
+                    "player": "56"
+                },
+                {
+                    "minute": "67",
+                    "type": "yellow",
+                    "player": "48"
+                },
+                {
+                    "minute": "72",
+                    "type": "yellow",
+                    "player": "61"
+                }
+            ],
+            "homeOffsides": 0,
+            "awayOffsides": 1
+        },
+        {
+            "id": 9,
+            "matchday": 1,
+            "date": "2025-08-18",
+            "time": "21:00",
+            "homeTeam": 6,
+            "awayTeam": 14,
+            "homeGoals": [
+                {
+                    "minute": "81",
+                    "scorer": "194",
+                    "assist": "198"
+                }
+            ],
+            "awayGoals": [
+                {
+                    "minute": "21",
+                    "scorer": "440",
+                    "assist": "448"
+                }
+            ],
+            "homePossession": 68,
+            "awayPossession": 32,
+            "homeShots": 6,
+            "awayShots": 12,
+            "homeShotsOnTarget": 2,
+            "awayShotsOnTarget": 4,
+            "homeCorners": 1,
+            "awayCorners": 3,
+            "homeFouls": 14,
+            "awayFouls": 13,
+            "homeCards": [],
+            "awayCards": [
+                {
+                    "minute": "83",
+                    "type": "yellow",
+                    "player": "435"
+                }
+            ],
+            "homeOffsides": 4,
+            "awayOffsides": 0
+        },
+        {
+            "id": 10,
+            "matchday": 1,
+            "date": "2025-08-19",
+            "time": "21:00",
+            "homeTeam": 15,
+            "awayTeam": 3,
+            "homeGoals": [
+                {
+                    "minute": "51",
+                    "scorer": "499",
+                    "assist": null
+                }
+            ],
+            "awayGoals": [],
+            "homePossession": 71,
+            "awayPossession": 29,
+            "homeShots": 18,
+            "awayShots": 2,
+            "homeShotsOnTarget": 5,
+            "awayShotsOnTarget": 0,
+            "homeCorners": 7,
+            "awayCorners": 0,
+            "homeFouls": 10,
+            "awayFouls": 12,
+            "homeCards": [
+                {
+                    "minute": "90",
+                    "type": "yellow",
+                    "player": "499"
+                }
+            ],
+            "awayCards": [
+                {
+                    "minute": "90+4",
+                    "type": "red",
+                    "player": "95"
+                }
+            ],
+            "homeOffsides": 0,
+            "awayOffsides": 0
+        }
+    ]
+}
