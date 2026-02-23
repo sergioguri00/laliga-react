@@ -52,6 +52,7 @@ const SquadPlayers = ({
             <a
               href={`/players/${player.id}`}
               className={`text-start ${team.mainColor === "#ffffff" ? "border border-mainblack" : ""} p-4 w-full flex flex-col gap-4 relative text-sm md:text-md xl:text-[16px] hover:opacity-80 hover:scale-[0.98] transition`}
+              key={player.id}
             >
               <div
                 className="absolute inset-0"
