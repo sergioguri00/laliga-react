@@ -129,7 +129,7 @@ export function translator (lang: keyof typeof dictionary, key: keyof typeof dic
   return dictionary[lang][key] || 'key not found'
 }
 
-const countriesDictionary = {
+export const countriesDictionary = {
   en: {
     Albania: 'Albania',
     Algeria: 'Algeria',

@@ -7,10 +7,12 @@ import Squad from "@/components/Squad.jsx";
 import { translator } from "@/utils/dictionary.js";
 import type { Team } from "@/interfaces/interfaces.ts";
 import { useState } from "react";
+import useDocumentTitle from "@/utils/useDocumentTitle";
 
 const TeamDetail = () => {
   const { id } = useParams() as { id: string };
   const team = teamsData.teams[Number(id) - 1];
+  useDocumentTitle(team?.shortName ?? "Equipo");
   const manager = managersData.managers[Number(id) - 1];
   const players = playersData.teams[Number(id) - 1].players;
 

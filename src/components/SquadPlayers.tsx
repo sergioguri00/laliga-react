@@ -4,7 +4,15 @@ import { getCountryCode } from "@/utils/countryCodes.ts";
 import { formatBirthdayDate } from "@/utils/formatDate";
 import { textColorByTeam } from "@/utils/textColorByTeam.ts";
 
-const SquadPlayers = ({ players, team }: { players: Player[]; team: Team }) => {
+const SquadPlayers = ({
+  players,
+  team,
+  showLegend,
+}: {
+  players: Player[];
+  team: Team;
+  showLegend: boolean;
+}) => {
   const currentLang = "es";
 
   const getPositionKey = (
@@ -26,11 +34,13 @@ const SquadPlayers = ({ players, team }: { players: Player[]; team: Team }) => {
 
   return (
     <>
-      <div className="border-b border-mainblack w-full text-start mt-10">
-        <p className="uppercase font-laliga text-2xl pb-2">
-          {translator(currentLang, getPositionKey(players[0].position))}
-        </p>
-      </div>
+      {showLegend && (
+        <div className="border-b border-mainblack w-full text-start mt-10">
+          <p className="uppercase font-laliga text-2xl pb-2">
+            {translator(currentLang, getPositionKey(players[0].position))}
+          </p>
+        </div>
+      )}
       <div
         className="grid mt-4 justify-items-center justify-center gap-4 p-3 text-sm md:text-md xl:text-[16px]"
         style={{
@@ -41,16 +51,16 @@ const SquadPlayers = ({ players, team }: { players: Player[]; team: Team }) => {
           player.position === player.position ? (
             <a
               href={`/players/${player.id}`}
-              className={`text-start ${team.mainColor === "#ffffff" ? "border border-mainblack" : ""} rounded-lg p-4 w-full flex flex-col gap-4 relative text-sm md:text-md xl:text-[16px] hover:opacity-80 hover:scale-[0.98] transition`}
+              className={`text-start ${team.mainColor === "#ffffff" ? "border border-mainblack" : ""} p-4 w-full flex flex-col gap-4 relative text-sm md:text-md xl:text-[16px] hover:opacity-80 hover:scale-[0.98] transition`}
             >
               <div
-                className="absolute inset-0 rounded-lg"
+                className="absolute inset-0"
                 style={{
                   background: `radial-gradient(circle, ${team.secondaryColor} 0%, ${team.mainColor} 75%)`,
                 }}
               />
               <div
-                className="absolute inset-0 rounded-lg bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage: `url('/src/images/background-teams-grid.webp')`,
                 }}
@@ -87,12 +97,12 @@ const SquadPlayers = ({ players, team }: { players: Player[]; team: Team }) => {
                     {player.knownAs !== null ? player.knownAs : player.lastName}
                   </p>
                 </div>
-                <div className="flex flex-row justify-center items-center gap-1">
+                <div className="flex flex-row justify-center items-center gap-2">
                   <div className="flex flex-row items-center">
                     <img
                       src={`/src/images/flags/${getCountryCode(player.country)}.svg`}
                       alt={String(player.country)}
-                      className="mr-2 w-6 h-4"
+                      className="w-6 h-4"
                     />
                   </div>
                   <p

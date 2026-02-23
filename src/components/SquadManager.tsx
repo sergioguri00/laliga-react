@@ -21,16 +21,16 @@ const SquadManager = ({ manager, team }: { manager: Manager; team: Team }) => {
         }}
       >
         <div
-          className={`text-start ${team.mainColor === "#ffffff" ? "border border-mainblack" : ""} rounded-lg p-4 w-full flex flex-col gap-4 relative text-sm md:text-md xl:text-[16px]`}
+          className={`text-start ${team.mainColor === "#ffffff" ? "border border-mainblack" : ""} p-4 w-full flex flex-col gap-4 relative text-sm md:text-md xl:text-[16px]`}
         >
           <div
-            className="absolute inset-0 rounded-lg"
+            className="absolute inset-0"
             style={{
               background: `radial-gradient(circle, ${team.secondaryColor} 0%, ${team.mainColor} 75%)`,
             }}
           />
           <div
-            className="absolute inset-0 rounded-lg bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url('/src/images/background-teams-grid.webp')`,
             }}
@@ -59,11 +59,11 @@ const SquadManager = ({ manager, team }: { manager: Manager; team: Team }) => {
                 {manager.name}
               </p>
             </div>
-            <div className="flex flex-row justify-center items-center gap-1">
+            <div className="flex flex-row justify-center items-center gap-2">
               <img
                 src={`/src/images/flags/${getCountryCode(manager.country)}.svg`}
                 alt={manager.country}
-                className="mr-2 w-6 h-4"
+                className="w-6 h-4"
               />
               <p
                 className="uppercase font-bold text-[10px] sm:text-sm"
