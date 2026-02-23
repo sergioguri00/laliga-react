@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Teams from "@/pages/Teams";
 import TeamDetail from "@/pages/TeamDetail";
 import PlayerDetail from "@/pages/PlayerDetail";
+import ManagerDetail from "@/pages/ManagerDetail";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -21,6 +22,7 @@ const AnimatedRoutes = () => {
           <Route path="/" element={<Teams />} />
           <Route path="/teams/:id" element={<TeamDetail />} />
           <Route path="/players/:id" element={<PlayerDetail />} />
+          <Route path="/managers/:id" element={<ManagerDetail />} />
         </Routes>
       </AnimatePresence>
       <Footer />
