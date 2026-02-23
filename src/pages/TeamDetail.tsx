@@ -3,11 +3,13 @@ import teamsData from "@/data/teams.json";
 import managersData from "@/data/managers.json";
 import playersData from "@/data/players.json";
 import TeamHeader from "@/components/TeamHeader.js";
+import matchesData from "@/data/matches.json";
 import Squad from "@/components/Squad.jsx";
 import { translator } from "@/utils/dictionary.js";
 import type { Team } from "@/interfaces/interfaces.ts";
 import { useState } from "react";
 import useDocumentTitle from "@/hooks/useDocumentTitle";
+import ResultsTable from "@/components/ResultsTable.jsx";
 
 const TeamDetail = () => {
   const { id } = useParams() as { id: string };
@@ -15,6 +17,9 @@ const TeamDetail = () => {
   useDocumentTitle(team?.shortName ?? "Equipo");
   const manager = managersData.managers[Number(id) - 1];
   const players = playersData.teams[Number(id) - 1].players;
+  const matches = matchesData.matchday.filter(
+    (match) => match.homeTeam === Number(id) || match.awayTeam === Number(id),
+  );
 
   const currentLang = "es";
 
@@ -56,61 +61,10 @@ const TeamDetail = () => {
             <h2 className="text-3xl text-bold uppercase font-laliga mb-10 text-center">
               {`${team.shortName} ${translator(currentLang, "resultsSection")}`}
             </h2>
-            {/*<ResultsTable teamResults={true} matchdayResultsData={resultsData} />*/}
+            <ResultsTable teamResults={true} matchdayResultsData={matches} />
           </section>
         )}
       </div>
-
-      {/*<script>
-        document.addEventListener("astro:page-load", () => {
-        if (window.location.href.includes("#results")) {
-            changeTab("results");
-        } else if (window.location.href.includes("#squad")) {
-            changeTab("squad");
-        } else {
-            const squadSection = document.getElementById("squadSection");
-            if (squadSection) squadSection.classNameList.remove("hidden");
-        }
-
-        const sections = document.querySelectorAll("div.section");
-        sections.forEach((section) => {
-            section.addEventListener("click", () => changeTab(section.id));
-        });
-
-        function changeTab(tab: string) {
-            const squadSection = document.getElementById("squadSection");
-            const resultsSection = document.getElementById("resultsSection");
-            const squad = document.getElementById("squad");
-            const results = document.getElementById("results");
-            if (tab === "results") {
-            squadSection?.classNameList.add("hidden");
-            resultsSection?.classNameList.remove("hidden");
-            if (squad && results) {
-                squad.classNameList.remove("border-laligared");
-                squad.classNameList.remove("font-bold");
-                squad.classNameList.add("hover:text-laligared");
-                results.classNameList.add("border-laligared");
-                results.classNameList.add("font-bold");
-                results.classNameList.remove("hover:text-laligared");
-                window.location.href = "#results";
-            }
-            } else {
-            squadSection?.classNameList.remove("hidden");
-            resultsSection?.classNameList.add("hidden");
-            if (squad && results) {
-                squad.classNameList.add("border-laligared");
-                squad.classNameList.add("font-bold");
-                squad.classNameList.remove("hover:text-laligared");
-                results.classNameList.remove("border-laligared");
-                results.classNameList.remove("font-bold");
-                results.classNameList.add("hover:text-laligared");
-                window.location.href = "#squad";
-            }
-            }
-        }
-        });
-    </script>
-    */}
     </>
   );
 };

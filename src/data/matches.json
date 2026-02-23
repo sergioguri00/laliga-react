@@ -1,9 +1,9 @@
 {
-    "matches": [
+    "matchday": [
         {
             "id": 1,
             "matchday": 1,
-            "date": "2024-08-15",
+            "date": "2025-08-15",
             "time": "19:00",
             "homeTeam": 9,
             "awayTeam": 11,

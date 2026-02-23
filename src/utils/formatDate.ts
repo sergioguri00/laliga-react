@@ -15,8 +15,22 @@ export const formatDateDay = (date: string) => {
   return `${day}.${month}.${year}`
 }
 
-export const formatDateHour = (date: string) => {
-  const utcDate = new Date(date)
+export const formatDateHour = (time: string) => {
+  // Si ya es solo una hora (formato "HH:MM"), devolverla directamente
+  if (time.match(/^\d{1,2}:\d{2}$/)) {
+    const [hour, minute] = time.split(':')
+    return `${hour.padStart(2, '0')}:${minute}`
+  }
+  
+  // Si es un datetime completo, extraer la hora
+  const utcDate = new Date(time)
+  
+  // Verificar si la fecha es válida
+  if (isNaN(utcDate.getTime())) {
+    console.warn(`Invalid date/time: ${time}`)
+    return time // Devolver el valor original si no es válido
+  }
+  
   const formatter = new Intl.DateTimeFormat('default', {
     hour: '2-digit',
     minute: '2-digit',
