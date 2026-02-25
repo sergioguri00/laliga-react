@@ -31,65 +31,78 @@ const MatchDetail = () => {
     ...match.awayGoals.map((event) => ({ ...event, team: "away" as const })),
     ...match.awayCards.map((event) => ({ ...event, team: "away" as const })),
   ];
-  const events = [...homeEvents, ...awayEvents].sort(
-    (a, b) => Number(a.minute) - Number(b.minute),
-  );
+  const parseMinute = (minute: string): [number, number] => {
+    if (minute.includes("+")) {
+      const [base, extra] = minute.split("+").map(Number);
+      return [base, extra];
+    }
+    return [Number(minute), 0];
+  };
+
+  const events = [...homeEvents, ...awayEvents].sort((a, b) => {
+    const [aBase, aExtra] = parseMinute(a.minute);
+    const [bBase, bExtra] = parseMinute(b.minute);
+    if (aBase !== bBase) return aBase - bBase;
+    return aExtra - bExtra;
+  });
   return (
     <>
-      <section className="py-24 px-2 lg:px-10 flex flex-col">
-        <div
-          className="grid items-center justify-center px-4 xl:px-96 text-mainblack text-sm"
-          style={{ gridTemplateColumns: "45% 5% 45%" }}
-        >
-          <a
-            href={`https://www.google.com/maps/search/?api=1&query=${stadium.latitude}%2C${stadium.longitude}`}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="text-center sm:text-end inline-block hover:text-laligared transition"
+      <section className="pt-28 pb-8 px-4 xl:px-96 flex flex-col bg-gray-200">
+        <div className="bg-white rounded-2xl flex flex-col gap-4">
+          <div
+            className="grid items-center justify-center text-mainblack text-sm b-4 py-4"
+            style={{ gridTemplateColumns: "45% 5% 45%" }}
           >
-            <p>{stadium.name}</p>
-          </a>
-          <p className="text-center">·</p>
-          <p className="text-start">
-            {`${formatDateDay(match.date)} ${formatDateHour(match.time)}`}
-          </p>
-        </div>
-        <div
-          className="text-xl font-laliga text-mainblack grid text-center items-center pt-4 px-4 xl:px-96"
-          style={{ gridTemplateColumns: "40% 20% 40%" }}
-        >
-          <a
-            href={`/teams/${homeTeam.id}`}
-            className="flex flex-col justify-center items-center hover:scale-105 text-mainblack hover:text-laligared transition"
-          >
-            <img
-              src={`/src/images/teams/${homeTeam.id}.webp`}
-              alt={homeTeam.shortName}
-              className="w-20 h-20 md:w-32 md:h-32"
-            />
-            <p className="text-sm sm:text-xl">{homeTeam.shortName}</p>
-          </a>
-          <div className="text-4xl sm:text-5xl text-laligared">
-            <p>{`${match.homeGoals.length}-${match.awayGoals.length}`}</p>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${stadium.latitude}%2C${stadium.longitude}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-center sm:text-end inline-block hover:text-laligared transition"
+            >
+              <p>{stadium.name}</p>
+            </a>
+            <p className="text-center">·</p>
+            <p className="text-start">
+              {`${formatDateDay(match.date)} ${formatDateHour(match.time)}`}
+            </p>
           </div>
-          <a
-            href={`/teams/${awayTeam.id}`}
-            className="flex flex-col justify-center items-center hover:scale-105 text-mainblack hover:text-laligared transition"
+          <div
+            className="text-xl font-laliga text-mainblack grid text-center items-center pt-4"
+            style={{ gridTemplateColumns: "40% 20% 40%" }}
           >
-            <img
-              src={`/src/images/teams/${awayTeam.id}.webp`}
-              alt={awayTeam.shortName}
-              className="w-20 h-20 md:w-32 md:h-32"
-            />
-            <p className="text-sm sm:text-xl">{awayTeam.shortName}</p>
-          </a>
+            <a
+              href={`/teams/${homeTeam.id}`}
+              className="flex flex-col justify-center items-center hover:scale-105 text-mainblack hover:text-laligared transition"
+            >
+              <img
+                src={`/src/images/teams/${homeTeam.id}.webp`}
+                alt={homeTeam.shortName}
+                className="w-20 h-20 md:w-32 md:h-32"
+              />
+              <p className="text-sm sm:text-xl">{homeTeam.shortName}</p>
+            </a>
+            <div className="text-4xl sm:text-5xl text-laligared">
+              <p>{`${match.homeGoals.length}-${match.awayGoals.length}`}</p>
+            </div>
+            <a
+              href={`/teams/${awayTeam.id}`}
+              className="flex flex-col justify-center items-center hover:scale-105 text-mainblack hover:text-laligared transition"
+            >
+              <img
+                src={`/src/images/teams/${awayTeam.id}.webp`}
+                alt={awayTeam.shortName}
+                className="w-20 h-20 md:w-32 md:h-32"
+              />
+              <p className="text-sm sm:text-xl">{awayTeam.shortName}</p>
+            </a>
+          </div>
+          <MatchEvents
+            events={events}
+            homePlayers={playersData.teams[match.homeTeam - 1].players}
+            awayPlayers={playersData.teams[match.awayTeam - 1].players}
+          />
+          <MatchStats match={match} homeTeam={homeTeam} awayTeam={awayTeam} />
         </div>
-        <MatchEvents
-          events={events}
-          homePlayers={playersData.teams[match.homeTeam - 1].players}
-          awayPlayers={playersData.teams[match.awayTeam - 1].players}
-        />
-        <MatchStats match={match} homeTeam={homeTeam} awayTeam={awayTeam} />
       </section>
     </>
   );

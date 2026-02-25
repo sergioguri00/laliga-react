@@ -13,7 +13,7 @@ const MatchStats = ({
   awayTeam: Team;
 }) => {
   return (
-    <div className="flex flex-col px-4 xl:px-96 py-4">
+    <div className="flex flex-col p-8">
       <div className="flex flex-col justify-center items-center">
         <p className="-mb-6">{translator(currentLang, "possession")}</p>
         <div className="grid grid-cols-2 w-full">
