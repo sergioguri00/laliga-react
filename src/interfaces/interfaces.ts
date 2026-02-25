@@ -42,4 +42,49 @@ interface TeamBadge {
   badge: string;
 }
 
-export type { Manager, Player, Stadium, Team, TeamBadge };
+interface Match {
+  id: number;
+  matchday: number;
+  date: string;
+  time: string;
+  homeTeam: number;
+  awayTeam: number;
+  homeGoals: { minute: string; scorer: string, assist: string | null }[];
+  awayGoals: { minute: string; scorer: string, assist: string | null }[];
+  homePossession: number;
+  awayPossession: number;
+  homeShots: number;
+  awayShots: number;
+  homeShotsOnTarget: number;
+  awayShotsOnTarget: number;
+  homeCorners: number;
+  awayCorners: number;
+  homeFouls: number;
+  awayFouls: number;
+  homeCards: { minute: string; player: string; type: "yellow" | "red" }[];
+  awayCards: { minute: string; player: string; type: "yellow" | "red" }[];
+  homeOffsides: number;
+  awayOffsides: number;
+}
+
+type GoalEvent = {
+  team: "home" | "away";
+  minute: string;
+  scorer: string;
+  assist: string | null;
+};
+
+type CardEvent = {
+  team: "home" | "away";
+  minute: string;
+  player: string;
+  type: "red" | "yellow";
+};
+
+type MatchEvent = GoalEvent | CardEvent;
+
+interface MatchEventsProps {
+  events: MatchEvent[];
+}
+
+export type { Manager, Player, Stadium, Team, TeamBadge, Match, MatchEvent, MatchEventsProps };

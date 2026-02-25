@@ -58,10 +58,8 @@ const ResultsTable = ({
                 </a>
               </td>
               <td className="w-18 md:w-32 text-end">
-                <a
-                  href={`/matches/${result.matchday_id}-${result.homeTeam}-${result.awayTeam}`}
-                >
-                  <button className="p-2 rounded-lg hover:scale-105 text-sm transition match-button uppercase">
+                <a href={`/matches/${result.id}`}>
+                  <button className="p-2 rounded-lg hover:scale-105 text-sm transition match-button uppercase cursor-pointer">
                     {translator(currentLang, "viewMatch")}
                   </button>
                 </a>

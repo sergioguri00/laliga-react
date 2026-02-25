@@ -4,6 +4,7 @@ import Teams from "@/pages/Teams";
 import TeamDetail from "@/pages/TeamDetail";
 import PlayerDetail from "@/pages/PlayerDetail";
 import ManagerDetail from "@/pages/ManagerDetail";
+import MatchDetail from "@/pages/MatchDetail";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -23,6 +24,7 @@ const AnimatedRoutes = () => {
           <Route path="/teams/:id" element={<TeamDetail />} />
           <Route path="/players/:id" element={<PlayerDetail />} />
           <Route path="/managers/:id" element={<ManagerDetail />} />
+          <Route path="/matches/:id" element={<MatchDetail />} />
         </Routes>
       </AnimatePresence>
       <Footer />
