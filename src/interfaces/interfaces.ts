@@ -8,16 +8,16 @@ interface Manager {
 }
 
 interface Player {
-    id: number;
-    name: string;
-    lastName: string;
-    knownAs: string | null;
-    number: number;
-    height: number;
-    country: string;
-    position: string;
-    birthday: string;
-    teamId: number;
+  id: number;
+  name: string;
+  lastName: string;
+  knownAs: string | null;
+  number: number;
+  height: number;
+  country: string;
+  position: string;
+  birthday: string;
+  teamId: number;
 }
 
 interface Stadium {
@@ -49,8 +49,18 @@ interface Match {
   time: string;
   homeTeam: number;
   awayTeam: number;
-  homeGoals: { minute: string; scorer: string, assist: string | null }[];
-  awayGoals: { minute: string; scorer: string, assist: string | null }[];
+  homeGoals: {
+    minute: string;
+    scorer: string;
+    assist: string | null;
+    isOwnGoal: boolean;
+  }[];
+  awayGoals: {
+    minute: string;
+    scorer: string;
+    assist: string | null;
+    isOwnGoal: boolean;
+  }[];
   homePossession: number;
   awayPossession: number;
   homeShots: number;
@@ -107,4 +117,15 @@ interface PlayerStats {
   redCards: number;
 }
 
-export type { Manager, Player, Stadium, Team, TeamBadge, Match, MatchEvent, MatchEventsProps, Standing, PlayerStats };
+export type {
+  Manager,
+  Player,
+  Stadium,
+  Team,
+  TeamBadge,
+  Match,
+  MatchEvent,
+  MatchEventsProps,
+  Standing,
+  PlayerStats,
+};
