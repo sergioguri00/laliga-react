@@ -5,15 +5,12 @@ import TeamDetail from "@/pages/TeamDetail";
 import PlayerDetail from "@/pages/PlayerDetail";
 import ManagerDetail from "@/pages/ManagerDetail";
 import MatchDetail from "@/pages/MatchDetail";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
     <>
-      <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           {/*
@@ -27,7 +24,6 @@ const AnimatedRoutes = () => {
           <Route path="/matches/:id" element={<MatchDetail />} />
         </Routes>
       </AnimatePresence>
-      <Footer />
     </>
   );
 };
