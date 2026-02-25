@@ -1,4 +1,5 @@
 import type { MatchEventsProps, Player } from "@/interfaces/interfaces";
+import { PlayerLink } from "@/components/PlayerLink";
 
 const MatchEvents = ({
   events,
@@ -26,15 +27,11 @@ const MatchEvents = ({
                     className="h-6"
                     style={{ alignSelf: "center" }}
                   />
-                  <p className="justify-self-start">
-                    {homePlayers.filter(
-                      (player) => player.id === parseInt(event.player),
-                    )[0]?.knownAs ||
-                      homePlayers.filter(
-                        (player) => player.id === parseInt(event.player),
-                      )[0]?.lastName ||
-                      event.player}
-                  </p>
+                  <PlayerLink
+                    players={homePlayers}
+                    value={event.player}
+                    className="justify-self-start"
+                  />
                 </>
               ) : (
                 <>
@@ -44,27 +41,17 @@ const MatchEvents = ({
                     style={{ alignSelf: "center" }}
                   />
                   <div className="flex flex-row gap-2 items-baseline justify-self-start">
-                    <p>
-                      {homePlayers.filter(
-                        (player) => player.id === parseInt(event.scorer),
-                      )[0]?.knownAs ||
-                        homePlayers.filter(
-                          (player) => player.id === parseInt(event.scorer),
-                        )[0]?.lastName ||
-                        event.scorer}
-                    </p>
-                    <p className="text-[12px]">
-                      {event.assist &&
-                        `(${
-                          homePlayers.filter(
-                            (player) => player.id === parseInt(event.assist!),
-                          )[0]?.knownAs ||
-                          homePlayers.filter(
-                            (player) => player.id === parseInt(event.assist!),
-                          )[0]?.lastName ||
-                          event.assist
-                        })`}
-                    </p>
+                    <PlayerLink players={homePlayers} value={event.scorer} />
+                    {event.assist && (
+                      <span className="text-[12px]">
+                        (
+                        <PlayerLink
+                          players={homePlayers}
+                          value={event.assist}
+                        />
+                        )
+                      </span>
+                    )}
                   </div>
                 </>
               )}
@@ -73,15 +60,11 @@ const MatchEvents = ({
             <div className="grid grid-cols-[auto_30px_50px] gap-1 w-full justify-items-center">
               {"type" in event ? (
                 <>
-                  <p className="justify-self-end">
-                    {awayPlayers.filter(
-                      (player) => player.id === parseInt(event.player),
-                    )[0]?.knownAs ||
-                      awayPlayers.filter(
-                        (player) => player.id === parseInt(event.player),
-                      )[0]?.lastName ||
-                      event.player}
-                  </p>
+                  <PlayerLink
+                    players={awayPlayers}
+                    value={event.player}
+                    className="justify-self-end"
+                  />
                   <img
                     src={`/assets/${event.type}Card.svg`}
                     className="h-6"
@@ -91,27 +74,17 @@ const MatchEvents = ({
               ) : (
                 <>
                   <div className="flex flex-row gap-2 items-baseline justify-self-end">
-                    <p className="text-[12px]">
-                      {event.assist &&
-                        `(${
-                          awayPlayers.filter(
-                            (player) => player.id === parseInt(event.assist!),
-                          )[0]?.knownAs ||
-                          awayPlayers.filter(
-                            (player) => player.id === parseInt(event.assist!),
-                          )[0]?.lastName ||
-                          event.assist
-                        })`}
-                    </p>
-                    <p>
-                      {awayPlayers.filter(
-                        (player) => player.id === parseInt(event.scorer),
-                      )[0]?.knownAs ||
-                        awayPlayers.filter(
-                          (player) => player.id === parseInt(event.scorer),
-                        )[0]?.lastName ||
-                        event.scorer}
-                    </p>
+                    {event.assist && (
+                      <span className="text-[12px]">
+                        (
+                        <PlayerLink
+                          players={awayPlayers}
+                          value={event.assist}
+                        />
+                        )
+                      </span>
+                    )}
+                    <PlayerLink players={awayPlayers} value={event.scorer} />
                   </div>
                   <img
                     src="/assets/goal.svg"
