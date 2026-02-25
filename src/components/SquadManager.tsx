@@ -1,8 +1,8 @@
-import { translator } from "@/utils/dictionary.ts";
-import type { Manager, Team } from "@/interfaces/interfaces.ts";
-import { getCountryCode } from "@/utils/countryCodes.ts";
+import { translator } from "@/utils/dictionary";
+import { getCountryCode } from "@/utils/countryCodes";
 import { formatBirthdayDate } from "@/utils/formatDate";
-import { textColorByTeam } from "@/utils/textColorByTeam.ts";
+import { textColorByTeam } from "@/utils/textColorByTeam";
+import type { Manager, Team } from "@/interfaces/interfaces";
 
 const SquadManager = ({ manager, team }: { manager: Manager; team: Team }) => {
   const currentLang = "es";
@@ -94,4 +94,4 @@ const SquadManager = ({ manager, team }: { manager: Manager; team: Team }) => {
   );
 };
 
-export default SquadManager;
+export { SquadManager };

@@ -1,12 +1,12 @@
-import { formatDateDay, formatDateHour } from "@/utils/formatDate.js";
+import { useParams } from "react-router-dom";
+import { MatchEvents } from "@/components/MatchEvents";
+import { MatchStats } from "@/components/MatchStats";
+import { formatDateDay, formatDateHour } from "@/utils/formatDate";
+import type { Match } from "@/interfaces/interfaces";
 import teamsData from "@/data/teams.json";
 import stadiumsData from "@/data/stadiums.json";
 import matchesData from "@/data/matches.json";
-import { useParams } from "react-router-dom";
-import MatchEvents from "@/components/MatchEvents";
-import MatchStats from "@/components/MatchStats";
 import playersData from "@/data/players.json";
-import type { Match } from "@/interfaces/interfaces";
 
 const MatchDetail = () => {
   const { id } = useParams() as { id: string };

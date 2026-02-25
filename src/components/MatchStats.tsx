@@ -1,5 +1,5 @@
-import { translator } from "@/utils/dictionary.js";
-import type { Match, Team } from "@/interfaces/interfaces.ts";
+import { translator } from "@/utils/dictionary";
+import type { Match, Team } from "@/interfaces/interfaces";
 
 const currentLang = "es";
 
@@ -254,4 +254,4 @@ const MatchStats = ({
   );
 };
 
-export default MatchStats;
+export { MatchStats };

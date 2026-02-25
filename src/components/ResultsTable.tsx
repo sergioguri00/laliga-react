@@ -1,4 +1,4 @@
-import { translator } from "@/utils/dictionary.js";
+import { translator } from "@/utils/dictionary";
 import { formatDateDay, formatDateHour } from "@/utils/formatDate";
 import teamsData from "@/data/teams.json";
 
@@ -72,4 +72,4 @@ const ResultsTable = ({
   );
 };
 
-export default ResultsTable;
+export { ResultsTable };

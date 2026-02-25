@@ -130,4 +130,4 @@ const MatchEvents = ({
   );
 };
 
-export default MatchEvents;
+export { MatchEvents };

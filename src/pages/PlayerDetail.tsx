@@ -1,17 +1,17 @@
-import TeamHeader from "@/components/TeamHeader.tsx";
-import SamePositionPlayers from "@/components/SamePositionPlayers.tsx";
+import { useParams } from "react-router-dom";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { TeamHeader } from "@/components/TeamHeader";
+import { SamePositionPlayers } from "@/components/SamePositionPlayers";
 import {
   translator,
   countryTranslator,
   countriesDictionary,
-} from "@/utils/dictionary.js";
-import { formatBirthdayDate } from "@/utils/formatDate.js";
-import { getCountryCode } from "@/utils/countryCodes.js";
-import { useParams } from "react-router-dom";
+} from "@/utils/dictionary";
+import { formatBirthdayDate } from "@/utils/formatDate";
+import { getCountryCode } from "@/utils/countryCodes";
+import type { Player, Team } from "@/interfaces/interfaces";
 import playersData from "@/data/players.json";
 import teamsData from "@/data/teams.json";
-import type { Player, Team } from "@/interfaces/interfaces";
-import useDocumentTitle from "@/hooks/useDocumentTitle";
 
 const currentLang = "es";
 

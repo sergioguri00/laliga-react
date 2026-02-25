@@ -1,16 +1,16 @@
-import TeamHeader from "@/components/TeamHeader.tsx";
+import { useParams } from "react-router-dom";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { TeamHeader } from "@/components/TeamHeader";
 import {
   translator,
   countryTranslator,
   countriesDictionary,
-} from "@/utils/dictionary.js";
-import { formatBirthdayDate } from "@/utils/formatDate.js";
-import { getCountryCode } from "@/utils/countryCodes.js";
-import { useParams } from "react-router-dom";
+} from "@/utils/dictionary";
+import { formatBirthdayDate } from "@/utils/formatDate";
+import { getCountryCode } from "@/utils/countryCodes";
+import type { Team } from "@/interfaces/interfaces";
 import managersData from "@/data/managers.json";
 import teamsData from "@/data/teams.json";
-import type { Team } from "@/interfaces/interfaces";
-import useDocumentTitle from "@/hooks/useDocumentTitle";
 
 const currentLang = "es";
 
@@ -97,4 +97,4 @@ const ManagerDetail = () => {
   );
 };
 
-export default ManagerDetail;
+export { ManagerDetail };

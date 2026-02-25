@@ -1,12 +1,6 @@
-import {
-  translator,
-  countryTranslator,
-  countriesDictionary,
-} from "@/utils/dictionary.js";
-import { getCountryCode } from "@/utils/countryCodes.js";
-import { formatDateDay } from "@/utils/formatDate.js";
+import { SquadPlayers } from "@/components/SquadPlayers";
+import { translator } from "@/utils/dictionary";
 import type { Player, Team } from "@/interfaces/interfaces";
-import SquadPlayers from "./SquadPlayers";
 
 const currentLang = "es";
 
@@ -33,4 +27,4 @@ const SamePositionPlayers = ({
   );
 };
 
-export default SamePositionPlayers;
+export { SamePositionPlayers };

@@ -1,16 +1,15 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { TeamHeader } from "@/components/TeamHeader";
+import { Squad } from "@/components/Squad";
+import { ResultsTable } from "@/components/ResultsTable";
+import { translator } from "@/utils/dictionary";
+import type { Team } from "@/interfaces/interfaces";
 import teamsData from "@/data/teams.json";
 import managersData from "@/data/managers.json";
 import playersData from "@/data/players.json";
-import TeamHeader from "@/components/TeamHeader.js";
 import matchesData from "@/data/matches.json";
-import Squad from "@/components/Squad.jsx";
-import { translator } from "@/utils/dictionary.js";
-import type { Match, Team } from "@/interfaces/interfaces.ts";
-import { useState } from "react";
-import useDocumentTitle from "@/hooks/useDocumentTitle";
-import ResultsTable from "@/components/ResultsTable.jsx";
-import useStandings from "@/hooks/useStandings.js";
 
 const TeamDetail = () => {
   const { id } = useParams() as { id: string };
@@ -25,19 +24,10 @@ const TeamDetail = () => {
   const currentLang = "es";
 
   const [section, setSection] = useState("squad");
-  const standings = useStandings(matchesData.matchday as Match[]);
-  const teamStandings = standings.find(
-    (standing) => standing.teamId === Number(id),
-  );
-  const teamPosition = standings.findIndex((s) => s.teamId === Number(id)) + 1;
 
   return (
     <>
-      <TeamHeader
-        {...team}
-        teamStandings={teamStandings}
-        teamPosition={teamPosition}
-      />
+      <TeamHeader {...team} />
       <div className="py-3 px-2 md:px-5">
         <nav className="flex flex-row w-full justify-around px-5 mb-10">
           <div
@@ -79,4 +69,4 @@ const TeamDetail = () => {
   );
 };
 
-export default TeamDetail;
+export { TeamDetail };

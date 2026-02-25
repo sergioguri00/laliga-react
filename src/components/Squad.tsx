@@ -1,7 +1,7 @@
-import { translator } from "@/utils/dictionary.ts";
-import type { Team, Manager, Player } from "@/interfaces/interfaces.ts";
-import SquadPlayers from "@/components/SquadPlayers";
-import SquadManager from "@/components/SquadManager";
+import { SquadPlayers } from "@/components/SquadPlayers";
+import { SquadManager } from "@/components/SquadManager";
+import { translator } from "@/utils/dictionary";
+import type { Team, Manager, Player } from "@/interfaces/interfaces";
 
 const Squad = ({
   id,
@@ -59,4 +59,4 @@ const Squad = ({
   );
 };
 
-export default Squad;
+export { Squad };

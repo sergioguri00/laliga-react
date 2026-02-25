@@ -1,25 +1,18 @@
-import { translator } from "@/utils/dictionary.js";
+import { useStandings } from "@/hooks/useStandings";
+import { translator } from "@/utils/dictionary";
+import type { Match, Team } from "@/interfaces/interfaces";
 import stadiumsData from "@/data/stadiums.json";
-import type { Standing, Team } from "@/interfaces/interfaces.ts";
+import matchesData from "@/data/matches.json";
 
-/*const tableResponse = await fetch("http://localhost:1234/leagues/1/table");
-const tableData = await tableResponse.json();
-const teamPosition =
-  tableData.findIndex(
-    (teamLeague: { team_id: number }) => teamLeague.team_id === team.id
-  ) + 1;
-const teamStats = tableData[teamPosition - 1];*/
-
-const TeamHeader = ({
-  teamStandings,
-  teamPosition,
-  ...team
-}: Team & {
-  teamStandings: Standing | undefined;
-  teamPosition: number;
-}) => {
+const TeamHeader = ({ ...team }: Team) => {
   const currentLang = "es";
   const stadium = stadiumsData.stadiums[Number(team.id) - 1];
+  const standings = useStandings(matchesData.matchday as Match[]);
+  const teamStandings = standings.find(
+    (standing) => standing.teamId === Number(team.id),
+  );
+  const teamPosition =
+    standings.findIndex((s) => s.teamId === Number(team.id)) + 1;
   return (
     <div className="py-3 px-5 mt-20">
       {
@@ -102,18 +95,8 @@ const TeamHeader = ({
           </div>
         </div>
       }
-      {/*section === "players" ? (
-        <div className="mt-6 flex w-full justify-center sm:justify-end">
-          <a
-            href={getRelativeLocaleUrl(currentLang, `/teams/${team.id}`)}
-            className="bg-mainblack text-white rounded-2xl w-fit p-4 hover:scale-105 transition hover:bg-laligared font-laliga uppercase text-lg"
-          >
-            {translator(currentLang, "returnToTheTeam")}
-          </a>
-        </div>
-      ) : null*/}
     </div>
   );
 };
 
-export default TeamHeader;
+export { TeamHeader };

@@ -1,8 +1,8 @@
-import { translator } from "@/utils/dictionary.ts";
-import type { Player, Team } from "@/interfaces/interfaces.ts";
-import { getCountryCode } from "@/utils/countryCodes.ts";
+import { translator } from "@/utils/dictionary";
+import { getCountryCode } from "@/utils/countryCodes";
 import { formatBirthdayDate } from "@/utils/formatDate";
-import { textColorByTeam } from "@/utils/textColorByTeam.ts";
+import { textColorByTeam } from "@/utils/textColorByTeam";
+import type { Player, Team } from "@/interfaces/interfaces";
 
 const SquadPlayers = ({
   players,
@@ -150,4 +150,4 @@ const SquadPlayers = ({
   );
 };
 
-export default SquadPlayers;
+export { SquadPlayers };

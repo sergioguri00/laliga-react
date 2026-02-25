@@ -6,4 +6,4 @@ const useDocumentTitle = (title: string) => {
   }, [title]);
 };
 
-export default useDocumentTitle;
+export { useDocumentTitle };

@@ -63,4 +63,4 @@ const useStandings = (matches: Match[]): Standing[] => {
   }, [matches]);
 };
 
-export default useStandings;
+export { useStandings };

@@ -1,4 +1,4 @@
-import type { Team, Stadium } from "@/interfaces/interfaces.ts";
+import type { Team, Stadium } from "@/interfaces/interfaces";
 
 const TeamSquare = ({ team, stadium }: { team: Team; stadium: Stadium }) => {
   return (
@@ -45,4 +45,4 @@ const TeamSquare = ({ team, stadium }: { team: Team; stadium: Stadium }) => {
   );
 };
 
-export default TeamSquare;
+export { TeamSquare };
