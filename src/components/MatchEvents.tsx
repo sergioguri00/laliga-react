@@ -14,7 +14,7 @@ const MatchEvents = ({
       {events.map((event, index) => (
         <div
           key={index}
-          className={`flex flex-row items-center gap-4 w-full ${index % 2 === 0 ? "bg-gray-100" : "bg-gray-300"} p-2`}
+          className={`flex flex-row items-center gap-4 w-full ${index % 2 === 0 ? "bg-gray-100" : ""} p-2`}
         >
           {event.team === "home" ? (
             <div className="grid grid-cols-[30px_30px_auto] gap-1 w-full justify-items-center">
