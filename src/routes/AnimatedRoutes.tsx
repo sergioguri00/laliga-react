@@ -7,6 +7,7 @@ import { PlayerDetail } from "@/pages/PlayerDetail";
 import { ManagerDetail } from "@/pages/ManagerDetail";
 import { MatchDetail } from "@/pages/MatchDetail";
 import { About } from "@/pages/About";
+import { Matches } from "@/pages/Matches";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -20,6 +21,7 @@ const AnimatedRoutes = () => {
           <Route path="/teams/:id" element={<TeamDetail />} />
           <Route path="/players/:id" element={<PlayerDetail />} />
           <Route path="/managers/:id" element={<ManagerDetail />} />
+          <Route path="/matches" element={<Matches />} />
           <Route path="/matches/:id" element={<MatchDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Home />} />

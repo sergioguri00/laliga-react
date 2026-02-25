@@ -1,5 +1,6 @@
 import { translator } from "@/utils/dictionary";
 import { formatDateDay, formatDateHour } from "@/utils/formatDate";
+import type { Match } from "@/interfaces/interfaces";
 import teamsData from "@/data/teams.json";
 
 const currentLang = "es";
@@ -8,18 +9,18 @@ const ResultsTable = ({
   matchdayResultsData,
   teamResults,
 }: {
-  matchdayResultsData: any[];
+  matchdayResultsData: Match[];
   teamResults: boolean;
 }) => {
   return (
     <div>
       <table className="w-full text-center flex flex-col gap-4 justify-center">
-        {matchdayResultsData.map((result: any) => (
-          <div key={result.id}>
+        {matchdayResultsData.map((result: Match) => (
+          <tbody key={result.id}>
             <tr
               className={`${teamResults === true ? "block" : "hidden"} border-b border-mainblack my-4`}
             >
-              <td className="uppercase font-laliga text-2xl">{`${translator(currentLang, "matchday")} ${result.matches}`}</td>
+              <td className="uppercase font-laliga text-2xl">{`${translator(currentLang, "matchday")} ${result.matchday}`}</td>
             </tr>
             <tr className="font-laliga text-sm md:text-xl gap-2 md:gap-10 flex justify-between items-center">
               <td className="w-22 md:w-32 flex flex-col sm:flex-row sm:gap-2 text-lg sm:text-xl justify-end text-center">
@@ -65,7 +66,7 @@ const ResultsTable = ({
                 </a>
               </td>
             </tr>
-          </div>
+          </tbody>
         ))}
       </table>
     </div>

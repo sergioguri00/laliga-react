@@ -5,7 +5,7 @@ import { TeamHeader } from "@/components/TeamHeader";
 import { Squad } from "@/components/Squad";
 import { ResultsTable } from "@/components/ResultsTable";
 import { translator } from "@/utils/dictionary";
-import type { Team } from "@/interfaces/interfaces";
+import type { Match, Team } from "@/interfaces/interfaces";
 import teamsData from "@/data/teams.json";
 import managersData from "@/data/managers.json";
 import playersData from "@/data/players.json";
@@ -61,7 +61,10 @@ const TeamDetail = () => {
             <h2 className="text-3xl text-bold uppercase font-laliga mb-10 text-center">
               {`${team.shortName} ${translator(currentLang, "resultsSection")}`}
             </h2>
-            <ResultsTable teamResults={true} matchdayResultsData={matches} />
+            <ResultsTable
+              teamResults={true}
+              matchdayResultsData={matches as Match[]}
+            />
           </section>
         )}
       </div>
