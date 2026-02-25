@@ -1,5 +1,5 @@
 import Select from "react-select";
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { translator } from "@/utils/dictionary";
 import { ResultsTable } from "@/components/ResultsTable";
 import { selectorStyles } from "@/styles/selectorStyles";
@@ -17,14 +17,8 @@ const Matches = () => {
     value: "last",
     label: toTitleCase(translator("es", "lastMatchday")),
   });
-  const [lastMatchdayMatches, setLastMatchdayMatches] = useState(
-    matchesData.matches.filter(
-      (match) => match.matchday === lastMatchdayNumber,
-    ),
-  );
-
-  useEffect(() => {
-    setLastMatchdayMatches(
+  const lastMatchdayMatches = useMemo(
+    () =>
       matchesData.matches.filter(
         (match) =>
           match.matchday ===
@@ -32,8 +26,8 @@ const Matches = () => {
             ? lastMatchdayNumber
             : parseInt(selectedOption.value)),
       ),
-    );
-  }, [selectedOption]);
+    [selectedOption, lastMatchdayNumber],
+  );
 
   return (
     <section className="pt-24 pb-10 px-4 xl:px-72">
