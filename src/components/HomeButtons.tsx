@@ -22,6 +22,11 @@ const HomeButtons = () => {
           {translator(currentLang, "exploreManagers")}
         </div>
       </a>
+      <a href={"/matches/"}>
+        <div className="home-button">
+          {translator(currentLang, "exploreMatches")}
+        </div>
+      </a>
       <a href={"/about/"}>
         <div className="home-button">
           {translator(currentLang, "aboutWebsite")}

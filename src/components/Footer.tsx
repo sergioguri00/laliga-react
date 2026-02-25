@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col justify-center items-center w-full">
       <div
-        className={`flex flex-row items-center sm:justify-between p-4 mt-10 w-full overflow-x-auto border-y border-mainblack`}
+        className={`flex flex-row items-center sm:justify-between p-4 w-full overflow-x-auto border-y border-mainblack`}
         style={{ backgroundColor: "white" }}
       >
         {teamsData.teams.map((teambadge) => (

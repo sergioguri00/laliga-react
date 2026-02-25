@@ -14,12 +14,12 @@ const MatchDetail = () => {
     (match) => match.id === Number(id),
   ) as Match | undefined;
   if (!match) {
-    return <p>Match not found</p>;
+    return <p className="py-24">Match not found</p>;
   }
   const homeTeam = teamsData.teams.find((team) => team.id === match.homeTeam);
   const awayTeam = teamsData.teams.find((team) => team.id === match.awayTeam);
   if (!homeTeam || !awayTeam) {
-    return <p>Team not found</p>;
+    return <p className="py-24">Team not found</p>;
   }
   const stadium = stadiumsData.stadiums[match.homeTeam - 1];
 
@@ -47,7 +47,12 @@ const MatchDetail = () => {
   });
   return (
     <>
-      <section className="pt-28 pb-8 px-4 xl:px-96 flex flex-col bg-gray-200">
+      <section
+        className="pt-28 pb-8 px-4 xl:px-96 flex flex-col bg-cover bg-center"
+        style={{
+          backgroundImage: `url(/assets/stadiums/backgrounds/${stadium.id}.webp)`,
+        }}
+      >
         <div className="bg-white rounded-2xl flex flex-col gap-4">
           <div
             className="grid items-center justify-center text-mainblack text-sm b-4 py-4"

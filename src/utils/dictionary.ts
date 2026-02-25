@@ -60,7 +60,8 @@ export const dictionary = {
     fullName: 'full name',
     returnToTheTeam: 'return to the team',
     noPlayers: 'No players found',
-    exploreManagers: 'managers'
+    exploreManagers: 'managers',
+    exploreMatches: 'matches'
   },
   es: {
     president: 'presidente',
@@ -123,7 +124,8 @@ export const dictionary = {
     fullName: 'nombre completo',
     returnToTheTeam: 'volver al equipo',
     noPlayers: 'No se han encontrado jugadores',
-    exploreManagers: 'entrenadores'
+    exploreManagers: 'entrenadores',
+    exploreMatches: 'partidos'
   }
 }
 

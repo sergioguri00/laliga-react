@@ -91,7 +91,7 @@ const About = () => {
             <img src="/assets/logos/github.svg" className="h-10 w-10" />
           </a>
         </div>
-        <p>¡Gracias por tu visita!</p>
+        <p className="font-bold text-xl pb-10">¡Gracias por tu visita!</p>
       </div>
     </>
   );

@@ -17,7 +17,7 @@ const MatchEvents = ({
           className={`flex flex-row items-center gap-4 w-full ${index % 2 === 0 ? "bg-gray-100" : ""} p-2`}
         >
           {event.team === "home" ? (
-            <div className="grid grid-cols-[30px_30px_auto] gap-1 w-full justify-items-center">
+            <div className="grid grid-cols-[50px_30px_auto] gap-1 w-full justify-items-center">
               <p className="font-bold">{`${event.minute}'`}</p>
               {"type" in event ? (
                 <>
@@ -70,7 +70,7 @@ const MatchEvents = ({
               )}
             </div>
           ) : (
-            <div className="grid grid-cols-[auto_30px_30px] gap-1 w-full justify-items-center">
+            <div className="grid grid-cols-[auto_30px_50px] gap-1 w-full justify-items-center">
               {"type" in event ? (
                 <>
                   <p className="justify-self-end">
