@@ -21,9 +21,9 @@ const usePlayerStats = (matches: Match[], player: Player): PlayerStats => {
 
       for (const event of allMatchEvents) {
         if ("scorer" in event && Number(event.scorer) === player?.id) {
-          if (event.team === "home") {
+          if (event.team === "home" && ("ownGoal" in event && event.ownGoal)) {
             playerStats.scoredGoals++;
-          } else {
+          } else if (event.team === "away" && ("ownGoal" in event && event.ownGoal)) {
             playerStats.scoredGoals++;
           }
         }

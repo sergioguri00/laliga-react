@@ -62,7 +62,8 @@ export const dictionary = {
     noPlayers: 'No players found',
     exploreManagers: 'managers',
     exploreMatches: 'matches',
-    managers: 'managers'
+    managers: 'managers',
+    ownGoal: 'own goal'
   },
   es: {
     president: 'presidente',
@@ -127,7 +128,8 @@ export const dictionary = {
     noPlayers: 'No se han encontrado jugadores',
     exploreManagers: 'entrenadores',
     exploreMatches: 'partidos',
-    managers: 'entrenadores'
+    managers: 'entrenadores',
+    ownGoal: 'gol en propia puerta'
   }
 }
 

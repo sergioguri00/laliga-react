@@ -72,6 +72,7 @@ type GoalEvent = {
   minute: string;
   scorer: string;
   assist: string | null;
+  isOwnGoal: boolean;
 };
 
 type CardEvent = {
