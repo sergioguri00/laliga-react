@@ -3,7 +3,6 @@ import { translator } from "@/utils/dictionary";
 const Navbar = () => {
   const page = window.location.href.split("/");
   const pageId = page[3] ? page[3] : null;
-  console.log(pageId);
   return (
     <header
       className="h-20 fixed top-0 w-full z-50 border-b border-black"

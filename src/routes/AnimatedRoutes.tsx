@@ -1,11 +1,12 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Home } from "@/pages/Home";
-import Teams from "@/pages/Teams";
+import { Teams } from "@/pages/Teams";
 import { TeamDetail } from "@/pages/TeamDetail";
-import PlayerDetail from "@/pages/PlayerDetail";
+import { PlayerDetail } from "@/pages/PlayerDetail";
 import { ManagerDetail } from "@/pages/ManagerDetail";
-import MatchDetail from "@/pages/MatchDetail";
+import { MatchDetail } from "@/pages/MatchDetail";
+import { About } from "@/pages/About";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -20,6 +21,8 @@ const AnimatedRoutes = () => {
           <Route path="/players/:id" element={<PlayerDetail />} />
           <Route path="/managers/:id" element={<ManagerDetail />} />
           <Route path="/matches/:id" element={<MatchDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </AnimatePresence>
     </>

@@ -1,5 +1,15 @@
+import { HomeButtons } from "@/components/HomeButtons";
+import { LeagueTable } from "@/components/LeagueTable";
+
 const Home = () => {
-  return <h1>Welcome to La Liga React App</h1>;
+  return (
+    <>
+      <section className="py-24 px-4 flex flex-col gap-4">
+        <HomeButtons />
+        <LeagueTable />
+      </section>
+    </>
+  );
 };
 
 export { Home };

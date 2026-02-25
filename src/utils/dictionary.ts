@@ -29,7 +29,7 @@ export const dictionary = {
     ga: 'ga',
     gd: 'gd',
     lastMatchday: 'last matchday',
-    exploreTeams: 'explore laliga teams',
+    exploreTeams: 'teams',
     about: 'about',
     aboutWebsite: 'about this website',
     teams: 'teams',
@@ -41,7 +41,7 @@ export const dictionary = {
     corners: 'Corners',
     offsides: 'Offsides',
     matchdayResults: 'Matchday results',
-    explorePlayers: 'explore laliga players',
+    explorePlayers: 'players',
     wins: 'W',
     draws: 'D',
     losses: 'L',
@@ -59,7 +59,8 @@ export const dictionary = {
     players: 'players',
     fullName: 'full name',
     returnToTheTeam: 'return to the team',
-    noPlayers: 'No players found'
+    noPlayers: 'No players found',
+    exploreManagers: 'managers'
   },
   es: {
     president: 'presidente',
@@ -91,7 +92,7 @@ export const dictionary = {
     ga: 'gc',
     gd: 'dg',
     lastMatchday: 'última jornada',
-    exploreTeams: 'ver equipos de laliga',
+    exploreTeams: 'equipos',
     about: 'acerca de',
     aboutWebsite: 'acerca de esta web',
     teams: 'equipos',
@@ -103,7 +104,7 @@ export const dictionary = {
     corners: 'Córners',
     offsides: 'Fueras de juego',
     matchdayResults: 'Resultados de la jornada',
-    explorePlayers: 'ver jugadores de laliga',
+    explorePlayers: 'jugadores',
     wins: 'V',
     draws: 'E',
     losses: 'D',
@@ -121,7 +122,8 @@ export const dictionary = {
     players: 'jugadores',
     fullName: 'nombre completo',
     returnToTheTeam: 'volver al equipo',
-    noPlayers: 'No se han encontrado jugadores'
+    noPlayers: 'No se han encontrado jugadores',
+    exploreManagers: 'entrenadores'
   }
 }
 

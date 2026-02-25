@@ -230,7 +230,7 @@ body {
 .leagueTable {
   color: #00001b;
 
-  tr:first-child {
+  thead {
     border-bottom: 1px solid #00001b;
   }
 
@@ -254,24 +254,6 @@ body {
   }
 }
 
-.about-button {
-  border-radius: 9999px;
-  padding: 10px;
-  transition-property:
-    color, background-color, border-color, text-decoration-color, fill, stroke,
-    opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.about-button:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .index-grid {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -285,5 +267,54 @@ body {
   .index-grid {
     grid-template-columns: auto 1fr 1fr;
     justify-content: space-between;
+  }
+}
+
+.home-button {
+  display: flex;
+  justify-content: center;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 6rem;
+  height: 6rem;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  background-image: url("/assets/background-teams-grid.webp");
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+}
+
+.home-button:hover {
+  --tw-scale-x: 1.02;
+  --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-color: #ff4b44;
+  border-width: 0px;
+  color: white;
+}
+
+@media (min-width: 1280px) {
+  .home-button {
+    width: 16rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-button {
+    width: 10rem;
+    height: 8rem;
   }
 }

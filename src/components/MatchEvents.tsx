@@ -9,7 +9,6 @@ const MatchEvents = ({
   homePlayers: Player[];
   awayPlayers: Player[];
 }) => {
-  console.log(events);
   return (
     <section className="flex flex-col font-laliga bg-white">
       {events.map((event, index) => (

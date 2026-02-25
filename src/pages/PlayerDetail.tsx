@@ -176,4 +176,4 @@ const PlayerDetail = () => {
   );
 };
 
-export default PlayerDetail;
+export { PlayerDetail };
