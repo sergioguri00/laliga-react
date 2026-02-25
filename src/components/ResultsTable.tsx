@@ -32,7 +32,7 @@ const ResultsTable = ({
                   className="flex-row flex items-center justify-self-end hover:scale-105 hover:text-laligared transition"
                 >
                   <img
-                    src={`/src/images/teams/${result.homeTeam}.webp`}
+                    src={`/assets/teams/${result.homeTeam}.webp`}
                     className="h-10"
                   />
                   <p className="text-xl hidden lg:block">
@@ -49,7 +49,7 @@ const ResultsTable = ({
                   className="flex-row flex items-center justify-self-start hover:scale-105 hover:text-laligared transition"
                 >
                   <img
-                    src={`/src/images/teams/${result.awayTeam}.webp`}
+                    src={`/assets/teams/${result.awayTeam}.webp`}
                     className="h-10"
                   />
                   <p className="hidden lg:block">

@@ -61,7 +61,7 @@ const TeamHeader = ({
               className="flex flex-col hover:scale-105 transition"
             >
               <img
-                src={`/src/images/teams/${team.id}.webp`}
+                src={`/assets/teams/${team.id}.webp`}
                 alt={team.name}
                 className="mx-auto h-full"
               />
@@ -93,7 +93,7 @@ const TeamHeader = ({
                 className="flex flex-col hover:scale-105 transition"
               >
                 <img
-                  src={`/src/images/stadiums/${team.id}.webp`}
+                  src={`/assets/stadiums/${team.id}.webp`}
                   alt={stadium.name}
                   className="mx-auto h-24"
                 />

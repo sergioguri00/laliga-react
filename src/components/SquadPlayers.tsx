@@ -63,13 +63,13 @@ const SquadPlayers = ({
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('/src/images/background-teams-grid.webp')`,
+                  backgroundImage: `url('/assets/background-teams-grid.webp')`,
                 }}
               />
               <div className="relative">
                 <div className="absolute inset-0 bg-no-repeat bg-center">
                   <img
-                    src={`/src/images/teams/${team.id}.webp`}
+                    src={`/assets/teams/${team.id}.webp`}
                     alt={team.name}
                     className="w-20 h-20 object-cover"
                   />
@@ -83,7 +83,7 @@ const SquadPlayers = ({
                   {player.number}
                 </p>
                 <img
-                  src={`/src/images/players/${team.id}/${player.id}.webp`}
+                  src={`/assets/players/${team.id}/${player.id}.webp`}
                   alt={player.knownAs || player.lastName}
                   className="w-[256px] aspect-square object-cover"
                 />
@@ -101,7 +101,7 @@ const SquadPlayers = ({
                 <div className="flex flex-row justify-center items-center gap-2">
                   <div className="flex flex-row items-center">
                     <img
-                      src={`/src/images/flags/${getCountryCode(player.country)}.svg`}
+                      src={`/assets/flags/${getCountryCode(player.country)}.svg`}
                       alt={String(player.country)}
                       className="w-6 h-4"
                     />

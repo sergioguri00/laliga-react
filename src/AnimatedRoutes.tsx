@@ -5,8 +5,8 @@ import TeamDetail from "@/pages/TeamDetail";
 import PlayerDetail from "@/pages/PlayerDetail";
 import ManagerDetail from "@/pages/ManagerDetail";
 import MatchDetail from "@/pages/MatchDetail";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const AnimatedRoutes = () => {
   const location = useLocation();

@@ -31,19 +31,19 @@ const SquadManager = ({ manager, team }: { manager: Manager; team: Team }) => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: `url('/src/images/background-teams-grid.webp')`,
+                backgroundImage: `url('/assets/background-teams-grid.webp')`,
               }}
             />
             <div className="relative">
               <div className="absolute inset-0 bg-no-repeat bg-center">
                 <img
-                  src={`/src/images/teams/${team.id}.webp`}
+                  src={`/assets/teams/${team.id}.webp`}
                   alt={team.name}
                   className="w-20 h-20 object-cover"
                 />
               </div>
               <img
-                src={`/src/images/managers/${manager.id}.webp`}
+                src={`/assets/managers/${manager.id}.webp`}
                 alt={manager.fullName}
                 className="w-[256px] aspect-square object-cover"
               />
@@ -60,7 +60,7 @@ const SquadManager = ({ manager, team }: { manager: Manager; team: Team }) => {
               </div>
               <div className="flex flex-row justify-center items-center gap-2">
                 <img
-                  src={`/src/images/flags/${getCountryCode(manager.country)}.svg`}
+                  src={`/assets/flags/${getCountryCode(manager.country)}.svg`}
                   alt={manager.country}
                   className="w-6 h-4"
                 />

@@ -23,7 +23,7 @@ const MatchEvents = ({
               {"type" in event ? (
                 <>
                   <img
-                    src={`/src/assets/${event.type}Card.svg`}
+                    src={`/assets/${event.type}Card.svg`}
                     className="h-6"
                     style={{ alignSelf: "center" }}
                   />
@@ -40,7 +40,7 @@ const MatchEvents = ({
               ) : (
                 <>
                   <img
-                    src="/src/assets/goal.svg"
+                    src="/assets/goal.svg"
                     className="h-5"
                     style={{ alignSelf: "center" }}
                   />
@@ -84,7 +84,7 @@ const MatchEvents = ({
                       event.player}
                   </p>
                   <img
-                    src={`/src/assets/${event.type}Card.svg`}
+                    src={`/assets/${event.type}Card.svg`}
                     className="h-6"
                     style={{ alignSelf: "center" }}
                   />
@@ -115,7 +115,7 @@ const MatchEvents = ({
                     </p>
                   </div>
                   <img
-                    src="/src/assets/goal.svg"
+                    src="/assets/goal.svg"
                     className="h-5"
                     style={{ alignSelf: "center" }}
                   />

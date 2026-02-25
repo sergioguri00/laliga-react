@@ -75,7 +75,7 @@ const MatchDetail = () => {
               className="flex flex-col justify-center items-center hover:scale-105 text-mainblack hover:text-laligared transition"
             >
               <img
-                src={`/src/images/teams/${homeTeam.id}.webp`}
+                src={`/assets/teams/${homeTeam.id}.webp`}
                 alt={homeTeam.shortName}
                 className="w-20 h-20 md:w-32 md:h-32"
               />
@@ -89,7 +89,7 @@ const MatchDetail = () => {
               className="flex flex-col justify-center items-center hover:scale-105 text-mainblack hover:text-laligared transition"
             >
               <img
-                src={`/src/images/teams/${awayTeam.id}.webp`}
+                src={`/assets/teams/${awayTeam.id}.webp`}
                 alt={awayTeam.shortName}
                 className="w-20 h-20 md:w-32 md:h-32"
               />

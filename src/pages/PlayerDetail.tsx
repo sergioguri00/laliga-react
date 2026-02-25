@@ -41,7 +41,7 @@ const PlayerDetail = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="justify-self-center lg:order-2">
             <img
-              src={`/src/images/players/${team.id}/${player.id}.webp`}
+              src={`/assets/players/${team.id}/${player.id}.webp`}
               alt={`${player.knownAs !== null ? `${player.knownAs}` : `${player.name} ${player.lastName}`}`}
               className="w-80 h-full"
             />
@@ -73,7 +73,7 @@ const PlayerDetail = () => {
             </p>
             <div className="flex flex-row items-center mt-4 lg:self-start">
               <img
-                src={`/src/images/flags/${getCountryCode(player.country)}.svg`}
+                src={`/assets/flags/${getCountryCode(player.country)}.svg`}
                 alt={player.country}
                 className="mr-2 w-6 h-4"
               />
@@ -111,7 +111,7 @@ const PlayerDetail = () => {
         <div className="flex flex-col justify-center items-center align-middle">
           <a href={`/teams/${team.id}`} className="hover:scale-105 transition">
             <img
-              src={`/src/images/teams/${team.id}.webp`}
+              src={`/assets/teams/${team.id}.webp`}
               alt={`${team.shortName} logo`}
               className="w-32 h-32 hidden lg:block"
             />

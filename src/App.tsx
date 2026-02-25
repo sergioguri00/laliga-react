@@ -1,11 +1,11 @@
-import AnimatedRoutes from './components/AnimatedRoutes'
+import AnimatedRoutes from "@/AnimatedRoutes";
 
 function App() {
   return (
     <>
       <AnimatedRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

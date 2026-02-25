@@ -35,7 +35,7 @@ const ManagerDetail = () => {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="justify-self-center lg:order-2">
               <img
-                src={`/src/images/managers/${manager.id}.webp`}
+                src={`/assets/managers/${manager.id}.webp`}
                 alt={manager?.fullName ?? manager?.name ?? "Manager"}
                 className="w-80 h-full"
               />
@@ -48,7 +48,7 @@ const ManagerDetail = () => {
               </h1>
               <div className="flex flex-row items-center mt-4 lg:self-start">
                 <img
-                  src={`/src/images/flags/${getCountryCode(manager.country)}.svg`}
+                  src={`/assets/flags/${getCountryCode(manager.country)}.svg`}
                   alt={manager.country}
                   className="mr-2 w-6 h-4"
                 />
@@ -85,7 +85,7 @@ const ManagerDetail = () => {
               className="hover:scale-105 transition"
             >
               <img
-                src={`/src/images/teams/${team.id}.webp`}
+                src={`/assets/teams/${team.id}.webp`}
                 alt={`${team.shortName} logo`}
                 className="w-32 h-32 hidden lg:block"
               />
