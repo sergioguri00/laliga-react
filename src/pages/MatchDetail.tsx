@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import MatchEvents from "@/components/MatchEvents";
 import MatchStats from "@/components/MatchStats";
 import playersData from "@/data/players.json";
-import type { Match, Player } from "@/interfaces/interfaces";
+import type { Match } from "@/interfaces/interfaces";
 
 const MatchDetail = () => {
   const { id } = useParams() as { id: string };
