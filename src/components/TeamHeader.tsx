@@ -1,6 +1,6 @@
 import { translator } from "@/utils/dictionary.js";
 import stadiumsData from "@/data/stadiums.json";
-import type { Team } from "@/interfaces/interfaces.ts";
+import type { Standing, Team } from "@/interfaces/interfaces.ts";
 
 /*const tableResponse = await fetch("http://localhost:1234/leagues/1/table");
 const tableData = await tableResponse.json();
@@ -10,7 +10,14 @@ const teamPosition =
   ) + 1;
 const teamStats = tableData[teamPosition - 1];*/
 
-const TeamHeader = (team: Team) => {
+const TeamHeader = ({
+  teamStandings,
+  teamPosition,
+  ...team
+}: Team & {
+  teamStandings: Standing | undefined;
+  teamPosition: number;
+}) => {
   const currentLang = "es";
   const stadium = stadiumsData.stadiums[Number(team.id) - 1];
   return (
@@ -41,9 +48,9 @@ const TeamHeader = (team: Team) => {
               <p>{team.president}</p>
             </div>
             <div>
-              <p className="font-laliga text-2xl">{`POS. 4`}</p>
-              <p className="font-laliga text-2xl">{`100 pts`}</p>
-              <p className="font-laliga text-2xl">{`30 ${translator(currentLang, "wins")} | 10 ${translator(currentLang, "draws")} | 4 ${translator(currentLang, "losses")}`}</p>
+              <p className="font-laliga text-2xl">{`POS. ${teamPosition}`}</p>
+              <p className="font-laliga text-2xl">{`${teamStandings?.points ?? 0} pts`}</p>
+              <p className="font-laliga text-2xl">{`${teamStandings?.won ?? 0} ${translator(currentLang, "wins")} | ${teamStandings?.drawn ?? 0} ${translator(currentLang, "draws")} | ${teamStandings?.lost ?? 0} ${translator(currentLang, "losses")}`}</p>
             </div>
           </div>
           <div>

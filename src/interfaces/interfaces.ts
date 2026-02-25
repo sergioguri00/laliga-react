@@ -87,4 +87,16 @@ interface MatchEventsProps {
   events: MatchEvent[];
 }
 
-export type { Manager, Player, Stadium, Team, TeamBadge, Match, MatchEvent, MatchEventsProps };
+interface Standing {
+  teamId: number;
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  gf: number;
+  ga: number;
+  gd: number;
+  points: number;
+}
+
+export type { Manager, Player, Stadium, Team, TeamBadge, Match, MatchEvent, MatchEventsProps, Standing };
