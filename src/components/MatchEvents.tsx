@@ -43,18 +43,26 @@ const MatchEvents = ({
                   />
                   <div className="flex flex-row gap-2 items-baseline justify-self-start">
                     {event.isOwnGoal ? (
-                      <PlayerLink players={awayPlayers} value={event.scorer} />
+                      <PlayerLink
+                        players={awayPlayers}
+                        value={event.scorer}
+                        className="justify-self-start"
+                      />
                     ) : (
-                      <PlayerLink players={homePlayers} value={event.scorer} />
+                      <PlayerLink
+                        players={homePlayers}
+                        value={event.scorer}
+                        className="justify-self-start"
+                      />
                     )}
                     {event.assist && (
                       <span className="text-[12px]">
-                        (
                         <PlayerLink
                           players={homePlayers}
                           value={event.assist}
+                          className="justify-self-start"
+                          isAssist
                         />
-                        )
                       </span>
                     )}
                     {event.isOwnGoal && (
@@ -86,23 +94,31 @@ const MatchEvents = ({
                   <div className="flex flex-row gap-2 items-baseline justify-self-end">
                     {event.assist && (
                       <span className="text-[12px]">
-                        (
                         <PlayerLink
                           players={awayPlayers}
                           value={event.assist}
+                          className="justify-self-end"
+                          isAssist
                         />
-                        )
                       </span>
                     )}
                     {event.isOwnGoal && (
                       <span className="text-[12px]">
-                        (Gol en propia puerta)
+                        ({translator("es", "ownGoal")})
                       </span>
                     )}
                     {event.isOwnGoal ? (
-                      <PlayerLink players={homePlayers} value={event.scorer} />
+                      <PlayerLink
+                        players={homePlayers}
+                        value={event.scorer}
+                        className="justify-self-end"
+                      />
                     ) : (
-                      <PlayerLink players={awayPlayers} value={event.scorer} />
+                      <PlayerLink
+                        players={awayPlayers}
+                        value={event.scorer}
+                        className="justify-self-end"
+                      />
                     )}
                   </div>
                   <img

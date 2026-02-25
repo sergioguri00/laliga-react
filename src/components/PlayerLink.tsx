@@ -11,20 +11,25 @@ const PlayerLink = ({
   players,
   value,
   className,
+  isAssist,
 }: {
   players: Player[];
   value: string;
   className?: string;
+  isAssist?: boolean;
 }) => {
   const id = parseInt(value);
   const name = getPlayerName(players, value);
-  if (isNaN(id)) return <p className={className}>{name}</p>;
+  console.log("name", name);
+  console.log(className);
+  if (isNaN(id))
+    return <p className={className}>{isAssist ? `(${name})` : name}</p>;
   return (
     <a
       href={`/players/${id}`}
       className={`hover:text-laligared transition ${className ?? ""}`}
     >
-      {name}
+      {isAssist ? `(${name})` : name}
     </a>
   );
 };
