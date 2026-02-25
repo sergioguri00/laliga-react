@@ -7,7 +7,7 @@
       "latitude": 43.264205,
       "longitude": -2.949369,
       "capacity": 53289,
-      "team_id": 1
+      "teamId": 1
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "latitude": 40.436380,
       "longitude": -3.599350,
       "capacity": 70460,
-      "team_id": 2
+      "teamId": 2
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "latitude": 42.796910,
       "longitude": -1.637210,
       "capacity": 23576,
-      "team_id": 3
+      "teamId": 3
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "latitude": 42.211920,
       "longitude": -8.739740,
       "capacity": 24870,
-      "team_id": 4
+      "teamId": 4
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "latitude": 42.837090,
       "longitude": -2.688250,
       "capacity": 19840,
-      "team_id": 5
+      "teamId": 5
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "latitude": 38.26718,
       "longitude": -0.66279,
       "capacity": 31388,
-      "team_id": 6
+      "teamId": 6
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "latitude": 41.38089,
       "longitude": 2.12288,
       "capacity": 45401,
-      "team_id": 7
+      "teamId": 7
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "latitude": 40.325560,
       "longitude": -3.714730,
       "capacity": 16500,
-      "team_id": 8
+      "teamId": 8
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "latitude": 41.961060,
       "longitude": 2.827750,
       "capacity": 14624,
-      "team_id": 9
+      "teamId": 9
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "latitude": 39.49476,
       "longitude": -0.36395,
       "capacity": 26354,
-      "team_id": 10
+      "teamId": 10
     },
     {
       "id": 11,
@@ -97,7 +97,7 @@
       "latitude": 40.392060,
       "longitude": -3.658710,
       "capacity": 14708,
-      "team_id": 11
+      "teamId": 11
     },
     {
       "id": 12,
@@ -106,7 +106,7 @@
       "latitude": 41.347920,
       "longitude": 2.075680,
       "capacity": 42260,
-      "team_id": 12
+      "teamId": 12
     },
     {
       "id": 13,
@@ -115,7 +115,7 @@
       "latitude": 39.589960,
       "longitude": 2.630040,
       "capacity": 26020,
-      "team_id": 13
+      "teamId": 13
     },
     {
       "id": 14,
@@ -124,7 +124,7 @@
       "latitude": 37.41715,
       "longitude": -6.00451,
       "capacity": 70000,
-      "team_id": 14
+      "teamId": 14
     },
     {
       "id": 15,
@@ -133,7 +133,7 @@
       "latitude": 40.453030,
       "longitude": -3.688330,
       "capacity": 78297,
-      "team_id": 15
+      "teamId": 15
     },
     {
       "id": 16,
@@ -142,7 +142,7 @@
       "latitude": 43.36079,
       "longitude": -5.87036,
       "capacity": 30500,
-      "team_id": 16
+      "teamId": 16
     },
     {
       "id": 17,
@@ -151,7 +151,7 @@
       "latitude": 43.301370,
       "longitude": -1.973610,
       "capacity": 40000,
-      "team_id": 17
+      "teamId": 17
     },
     {
       "id": 18,
@@ -160,7 +160,7 @@
       "latitude": 37.384050,
       "longitude": -5.970580,
       "capacity": 43864,
-      "team_id": 18
+      "teamId": 18
     },
     {
       "id": 19,
@@ -169,7 +169,7 @@
       "latitude": 39.474630,
       "longitude": -0.358210,
       "capacity": 49430,
-      "team_id": 19
+      "teamId": 19
     },
     {
       "id": 20,
@@ -178,7 +178,7 @@
       "latitude": 39.944130,
       "longitude": -0.103430,
       "capacity": 23500,
-      "team_id": 20
+      "teamId": 20
     }
   ]
 }

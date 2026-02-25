@@ -22,7 +22,7 @@ const ManagerDetail = () => {
   );
 
   const team = teamsData.teams.find(
-    (team) => team.id === manager?.team_id,
+    (team) => team.id === manager?.teamId,
   ) as Team;
 
   useDocumentTitle(manager?.fullName ?? manager?.name ?? "Manager");

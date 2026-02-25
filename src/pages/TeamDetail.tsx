@@ -17,7 +17,7 @@ const TeamDetail = () => {
   useDocumentTitle(team?.shortName ?? "Equipo");
   const manager = managersData.managers[Number(id) - 1];
   const players = playersData.teams[Number(id) - 1].players;
-  const matches = matchesData.matchday.filter(
+  const matches = matchesData.matches.filter(
     (match) => match.homeTeam === Number(id) || match.awayTeam === Number(id),
   );
 
@@ -52,7 +52,7 @@ const TeamDetail = () => {
             manager={manager}
             players={players.map((player) => ({
               ...player,
-              team_id: Number(id),
+              teamId: Number(id),
             }))}
           />
         )}

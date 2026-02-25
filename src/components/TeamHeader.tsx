@@ -7,7 +7,7 @@ import matchesData from "@/data/matches.json";
 const TeamHeader = ({ ...team }: Team) => {
   const currentLang = "es";
   const stadium = stadiumsData.stadiums[Number(team.id) - 1];
-  const standings = useStandings(matchesData.matchday as Match[]);
+  const standings = useStandings(matchesData.matches as Match[]);
   const teamStandings = standings.find(
     (standing) => standing.teamId === Number(team.id),
   );

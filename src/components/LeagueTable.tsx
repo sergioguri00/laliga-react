@@ -7,7 +7,7 @@ import teamsData from "@/data/teams.json";
 const currentLang = "es";
 
 const LeagueTable = () => {
-  const tableData = useStandings(matchesData.matchday as Match[]);
+  const tableData = useStandings(matchesData.matches as Match[]);
   return (
     <div className="px-4 lg:px-48 xl:px-96">
       <h2 className="text-2xl text-bold uppercase text-center font-laliga">

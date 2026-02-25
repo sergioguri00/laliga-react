@@ -6,7 +6,7 @@
       "fullName": "Ernesto Valverde",
       "country": "Spain",
       "birthday": "1964-02-09",
-      "team_id": 1
+      "teamId": 1
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "fullName": "Diego Simeone",
       "country": "Argentina",
       "birthday": "1970-04-28",
-      "team_id": 2
+      "teamId": 2
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "fullName": "Alessio Lisci",
       "country": "Italy",
       "birthday": "1985-11-04",
-      "team_id": 3
+      "teamId": 3
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "fullName": "Claudio Giráldez",
       "country": "Spain",
       "birthday": "1988-02-24",
-      "team_id": 4
+      "teamId": 4
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "fullName": "Eduardo Coudet",
       "country": "Argentina",
       "birthday": "1974-09-12",
-      "team_id": 5
+      "teamId": 5
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "fullName": "Eder Sarabia",
       "country": "Spain",
       "birthday": "1981-01-12",
-      "team_id": 6
+      "teamId": 6
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "fullName": "Hans-Dieter Flick",
       "country": "Germany",
       "birthday": "1965-02-24",
-      "team_id": 7
+      "teamId": 7
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "fullName": "José Bordalás",
       "country": "Spain",
       "birthday": "1964-03-05",
-      "team_id": 8
+      "teamId": 8
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "fullName": "Míchel Sánchez",
       "country": "Spain",
       "birthday": "1975-10-30",
-      "team_id": 9
+      "teamId": 9
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "fullName": "Luís Manuel Ferreira de Castro",
       "country": "Portugal",
       "birthday": "1980-05-07",
-      "team_id": 10
+      "teamId": 10
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "fullName": "Iñigo Pérez",
       "country": "Spain",
       "birthday": "1988-01-18",
-      "team_id": 11
+      "teamId": 11
     },
     {
       "id": 12,
@@ -94,7 +94,7 @@
       "fullName": "José Manuel González Álvarez",
       "country": "Spain",
       "birthday": "1979-01-14",
-      "team_id": 12
+      "teamId": 12
     },
     {
       "id": 13,
@@ -102,7 +102,7 @@
       "fullName": "Jagoba Arrasate",
       "country": "Spain",
       "birthday": "1978-04-22",
-      "team_id": 13
+      "teamId": 13
     },
     {
       "id": 14,
@@ -110,7 +110,7 @@
       "fullName": "Manuel Pellegrini",
       "country": "Chile",
       "birthday": "1953-09-16",
-      "team_id": 14
+      "teamId": 14
     },
     {
       "id": 15,
@@ -118,7 +118,7 @@
       "fullName": "Álvaro Arbeloa",
       "country": "Spain",
       "birthday": "1983-01-17",
-      "team_id": 15
+      "teamId": 15
     },
     {
       "id": 16,
@@ -126,7 +126,7 @@
       "fullName": "Guillermo Almada",
       "country": "Uruguay",
       "birthday": "1966-06-18",
-      "team_id": 16
+      "teamId": 16
     },
     {
       "id": 17,
@@ -134,7 +134,7 @@
       "fullName": "Pellegrino Matarazzo",
       "country": "United States",
       "birthday": "1977-11-28",
-      "team_id": 17
+      "teamId": 17
     },
     {
       "id": 18,
@@ -142,7 +142,7 @@
       "fullName": "Matías Almeyda",
       "country": "Argentina",
       "birthday": "1973-12-21",
-      "team_id": 18
+      "teamId": 18
     },
     {
       "id": 19,
@@ -150,7 +150,7 @@
       "fullName": "Carlos Corberán",
       "country": "Spain",
       "birthday": "1983-04-07",
-      "team_id": 19
+      "teamId": 19
     },
     {
       "id": 20,
@@ -158,7 +158,7 @@
       "fullName": "Marcelino García",
       "country": "Spain",
       "birthday": "1965-08-14",
-      "team_id": 20
+      "teamId": 20
     }
   ]
 }

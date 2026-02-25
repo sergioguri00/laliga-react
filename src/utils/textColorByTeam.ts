@@ -1,5 +1,5 @@
-export const textColorByTeam = (team_id: number): string => {
-    switch (team_id) {
+export const textColorByTeam = (teamId: number): string => {
+    switch (teamId) {
         case 1:
             return "#00001b";
         case 2:

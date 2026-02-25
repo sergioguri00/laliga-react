@@ -4,7 +4,7 @@ interface Manager {
   fullName: string;
   country: string;
   birthday: string;
-  team_id: number;
+  teamId: number;
 }
 
 interface Player {
@@ -17,7 +17,7 @@ interface Player {
     country: string;
     position: string;
     birthday: string;
-    team_id: number;
+    teamId: number;
 }
 
 interface Stadium {
@@ -99,4 +99,11 @@ interface Standing {
   points: number;
 }
 
-export type { Manager, Player, Stadium, Team, TeamBadge, Match, MatchEvent, MatchEventsProps, Standing };
+interface PlayerStats {
+  scoredGoals: number;
+  assistedGoals: number;
+  yellowCards: number;
+  redCards: number;
+}
+
+export type { Manager, Player, Stadium, Team, TeamBadge, Match, MatchEvent, MatchEventsProps, Standing, PlayerStats };

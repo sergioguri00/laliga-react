@@ -10,9 +10,9 @@ import playersData from "@/data/players.json";
 
 const MatchDetail = () => {
   const { id } = useParams() as { id: string };
-  const match = matchesData.matchday.find(
-    (match) => match.id === Number(id),
-  ) as Match | undefined;
+  const match = matchesData.matches.find((match) => match.id === Number(id)) as
+    | Match
+    | undefined;
   if (!match) {
     return <p className="py-24">Match not found</p>;
   }

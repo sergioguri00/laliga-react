@@ -19,7 +19,7 @@ const ResultsTable = ({
             <tr
               className={`${teamResults === true ? "block" : "hidden"} border-b border-mainblack my-4`}
             >
-              <td className="uppercase font-laliga text-2xl">{`${translator(currentLang, "matchday")} ${result.matchday}`}</td>
+              <td className="uppercase font-laliga text-2xl">{`${translator(currentLang, "matchday")} ${result.matches}`}</td>
             </tr>
             <tr className="font-laliga text-sm md:text-xl gap-2 md:gap-10 flex justify-between items-center">
               <td className="w-22 md:w-32 flex flex-col sm:flex-row sm:gap-2 text-lg sm:text-xl justify-end text-center">

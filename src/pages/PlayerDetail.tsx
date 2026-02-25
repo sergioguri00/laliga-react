@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { usePlayerStats } from "@/hooks/usePlayerStats";
 import { TeamHeader } from "@/components/TeamHeader";
 import { SamePositionPlayers } from "@/components/SamePositionPlayers";
 import {
@@ -9,9 +10,10 @@ import {
 } from "@/utils/dictionary";
 import { formatBirthdayDate } from "@/utils/formatDate";
 import { getCountryCode } from "@/utils/countryCodes";
-import type { Player, Team } from "@/interfaces/interfaces";
+import type { Player, Team, Match } from "@/interfaces/interfaces";
 import playersData from "@/data/players.json";
 import teamsData from "@/data/teams.json";
+import matchesData from "@/data/matches.json";
 
 const currentLang = "es";
 
@@ -23,7 +25,7 @@ const PlayerDetail = () => {
     ?.players.find((p) => p.id === parseInt(id)) as Player;
 
   const team = teamsData.teams.find(
-    (team) => team.id === player.team_id,
+    (team) => team.id === player.teamId,
   ) as Team;
 
   useDocumentTitle(player?.knownAs ?? player?.lastName ?? "Jugador");
@@ -33,6 +35,14 @@ const PlayerDetail = () => {
       samePositionPlayer.position === player.position &&
       samePositionPlayer.id !== player.id,
   ) as Player[];
+
+  const matches = matchesData.matches.filter(
+    (match) =>
+      match.homeTeam === Number(player.teamId) ||
+      match.awayTeam === Number(player.teamId),
+  );
+
+  const playerStats = usePlayerStats(matches as Match[], player as Player);
 
   return (
     <>
@@ -129,7 +139,7 @@ const PlayerDetail = () => {
                     team.mainColor != "#ffffff" ? team.mainColor : "#00001B",
                 }}
               >
-                0
+                {playerStats.scoredGoals}
               </span>
             </div>
             <div className="flex flex-col justify-center items-center align-middle">
@@ -141,7 +151,7 @@ const PlayerDetail = () => {
                     team.mainColor != "#ffffff" ? team.mainColor : "#00001B",
                 }}
               >
-                1
+                {playerStats.assistedGoals}
               </span>
             </div>
             <div className="flex flex-col justify-center items-center align-middle">
@@ -153,7 +163,7 @@ const PlayerDetail = () => {
                     team.mainColor != "#ffffff" ? team.mainColor : "#00001B",
                 }}
               >
-                5
+                {playerStats.yellowCards}
               </span>
             </div>
             <div className="flex flex-col justify-center items-center align-middle">
@@ -165,7 +175,7 @@ const PlayerDetail = () => {
                     team.mainColor != "#ffffff" ? team.mainColor : "#00001B",
                 }}
               >
-                2
+                {playerStats.redCards}
               </span>
             </div>
           </div>
