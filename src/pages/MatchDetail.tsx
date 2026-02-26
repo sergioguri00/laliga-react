@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { MatchEvents } from "@/components/MatchEvents";
 import { MatchStats } from "@/components/MatchStats";
 import { formatDateDay, formatDateHour } from "@/utils/formatDate";
@@ -45,6 +46,10 @@ const MatchDetail = () => {
     if (aBase !== bBase) return aBase - bBase;
     return aExtra - bExtra;
   });
+
+  useDocumentTitle(
+    `J${match.matchday} - ${homeTeam.shortName} vs ${awayTeam.shortName}`,
+  );
   return (
     <>
       <section

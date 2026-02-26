@@ -1,5 +1,6 @@
 import Select from "react-select";
 import { useState, useMemo } from "react";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { translator } from "@/utils/dictionary";
 import { ResultsTable } from "@/components/ResultsTable";
 import { selectorStyles } from "@/styles/selectorStyles";
@@ -28,6 +29,8 @@ const Matches = () => {
       ),
     [selectedOption, lastMatchdayNumber],
   );
+
+  useDocumentTitle("Partidos");
 
   return (
     <section className="pt-24 pb-10 px-4 xl:px-72">
