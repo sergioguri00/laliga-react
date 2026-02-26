@@ -41,10 +41,8 @@ const ManagerDetail = () => {
               />
             </div>
             <div className="flex flex-col items-center">
-              <h1 className="font-laliga text-5xl lg:self-start">
-                {manager.fullName !== null
-                  ? `${manager.fullName}`
-                  : `${manager.name}`}
+              <h1 className="font-laliga text-5xl text-center lg:self-start">
+                {manager.name}
               </h1>
               <div className="flex flex-row items-center mt-4 lg:self-start">
                 <img
