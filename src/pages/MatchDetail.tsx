@@ -72,7 +72,7 @@ const MatchDetail = () => {
             </p>
           </div>
           <div
-            className="text-xl font-laliga text-mainblack grid text-center items-center pt-4"
+            className="text-xl font-laliga text-mainblack grid text-center items-center"
             style={{ gridTemplateColumns: "40% 20% 40%" }}
           >
             <a

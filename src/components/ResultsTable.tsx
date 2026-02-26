@@ -23,7 +23,7 @@ const ResultsTable = ({
               <td className="uppercase font-laliga text-2xl">{`${translator(currentLang, "matchday")} ${result.matchday}`}</td>
             </tr>
             <tr className="font-laliga text-sm md:text-xl gap-2 md:gap-10 flex justify-between items-center">
-              <td className="w-22 md:w-32 flex flex-col sm:flex-row sm:gap-2 text-lg sm:text-xl justify-end text-center">
+              <td className="w-fit flex flex-col sm:flex-row sm:gap-2 text-lg sm:text-xl justify-end text-center">
                 <p>{formatDateDay(result.date)}</p>
                 <p>{formatDateHour(result.time)}</p>
               </td>
