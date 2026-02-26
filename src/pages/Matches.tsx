@@ -5,9 +5,9 @@ import { translator } from "@/utils/dictionary";
 import { ResultsTable } from "@/components/ResultsTable";
 import { selectorStyles } from "@/styles/selectorStyles";
 import { toTitleCase } from "@/utils/toTitleCase";
-import matchesData from "@/data/matches.json";
+import { getMatchOptions } from "@/utils/getOptions";
 import type { Match } from "@/interfaces/interfaces";
-import { getMatchOptions } from "@/utils/getMatchOptions";
+import matchesData from "@/data/matches.json";
 
 const Matches = () => {
   const lastMatchdayNumber = matchesData.matches.reduce(
